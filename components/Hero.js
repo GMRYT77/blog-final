@@ -105,12 +105,13 @@ const Hero = () => {
     <section className="w-full bg-t text-white">
       <div className="cont flex gap-16 py-10">
         <div className="w-2/3 flex  ">
-          <div className="relative w-[94%] aspect-[12/8]">
+          <div className="relative w-[94%] aspect-[12/8] overflow-hidden group">
             <Image
               src={`/${posts[currPost].img_url}`}
               layout="fill"
               objectFit="cover"
               alt=""
+              className="group-hover:scale-110 transition-[200ms] ease-in-out group-hover:opacity-70 "
             />
             <div className="absolute z-[30] w-full bottom-0 flex flex-col gap-3 px-5 py-3">
               <Link

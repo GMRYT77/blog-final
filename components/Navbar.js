@@ -3,10 +3,11 @@ import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { MdDarkMode } from "react-icons/md";
+import { FiChevronDown } from "react-icons/fi";
 
 const Navbar = () => {
   return (
-    <section className="sticky top-[-60px] bg-t w-full text-white pt-2 pb-3 flex flex-col gap-3 z-[99999] ">
+    <section className="sticky top-[-60px] bg-t w-full text-white pt-2 pb-3 flex flex-col gap-3 z-[99999]  shadow-lg">
       <div className="cont flex">
         <div className="relative flex-1 flex items-start">
           <div className="sticky top-[22px]  pt-2 pb-1  text-2xl text-white/70 pl-3 ">
@@ -24,8 +25,11 @@ const Navbar = () => {
             <Link href="/" className="hover:text-white">
               Latest
             </Link>
-            <Link href="/" className=" relative group">
-              <span className="hover:text-white">Categories</span>
+            <div className=" relative group">
+              <span className="hover:text-white flex gap-1 items-center">
+                Categories
+                <FiChevronDown className="group-hover:rotate-180 transition" />
+              </span>
               <div className="absolute top-full hidden group-hover:block pt-6  -left-2 min-w-[200%]">
                 <ul className=" p-2  bg-t flex flex-col ">
                   <Link href="/" className="w-fit py-1 px-2 hover:text-white">
@@ -42,7 +46,7 @@ const Navbar = () => {
                   </Link>
                 </ul>
               </div>
-            </Link>
+            </div>
             <Link href="/" className="hover:text-white">
               Blog
             </Link>

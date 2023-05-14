@@ -460,6 +460,13 @@
     font-family: "Zilla-I";
     src: url("../styles/fonts/Zilla_Slab/ZillaSlab-Italic.ttf");
   }
+  @font-face {
+    font-family: "Sora";
+    src: url("../styles/fonts/Sora/Sora-VariableFont_wght.ttf");
+  }
+  .sora {
+    font-family: "Sora", sans-serif;
+  }
   .prata {
     font-family: "Prata", sans-serif;
   }
