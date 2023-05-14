@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import PopularPosts from "@/components/PopularPosts";
+import Quote from "@/components/Quote";
 import SEO from "@/components/SEO";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <SEO title="Home Page" />
       <Hero />
       <PopularPosts />
+      <Quote />
     </section>
   );
 }

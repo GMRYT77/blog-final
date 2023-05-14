@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { TbNorthStar } from "react-icons/tb";
 
 const PopularPosts = () => {
   return (
@@ -19,108 +20,126 @@ const PopularPosts = () => {
           </div>
         </div>
 
-        <div className="w-full flex gap-8 mt-16 ">
-          <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
-            <div className="w-full relative aspect-[10/8]">
-              <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
-            </div>
-            <div className="flex flex-col p-3 gap-1 outfit">
-              <div className="text-[#333]/60 text-sm  font-bold">
-                December 30, 2022
+        <div className="flex flex-col gap-6 mt-16">
+          <h2 className="mukta text-3xl font-semibold tracking-wide text-[#333] gap-4 flex items-center">
+            <TbNorthStar className="text-yellow-600" />
+            Popular Posts
+          </h2>
+          <div className="w-full flex gap-8  ">
+            <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
+              <div className="w-full relative aspect-[10/8]">
+                <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
               </div>
-              <Link href="/">
-                <h1 className="text-lg font-semibold tracking-wide mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h1>
-              </Link>
-              <p className="text-sm text-[#333]/70 mb-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Impedit ducimus, praesentium dolorem quidem, iste voluptatem
-                ipsum consequatur in tenetur repellendus officia ipsam nihil
-                perspiciatis!
-              </p>
-              <div className="flex gap-4 items-center text-sm justify-end">
-                <Link href="/" className="text-[#111111]/80 hover:text-[#111]">
-                  Steve Jobs
+              <div className="flex flex-col p-3 gap-1 outfit">
+                <div className="text-[#333]/60 text-sm  font-bold">
+                  December 30, 2022
+                </div>
+                <Link href="/">
+                  <h1 className="text-lg font-semibold tracking-wide mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h1>
                 </Link>
+                <p className="text-sm text-[#333]/70 mb-1">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Impedit ducimus, praesentium dolorem quidem, iste voluptatem
+                  ipsum consequatur in tenetur repellendus officia ipsam nihil
+                  perspiciatis!
+                </p>
+                <div className="flex gap-4 items-center text-sm justify-end">
+                  <Link
+                    href="/"
+                    className="text-[#111111]/80 hover:text-[#111]"
+                  >
+                    Steve Jobs
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
-            <div className="w-full relative aspect-[10/8]">
-              <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
-            </div>
-            <div className="flex flex-col p-3 gap-1 outfit">
-              <div className="text-[#333]/60 text-sm  font-bold">
-                December 30, 2022
+            <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
+              <div className="w-full relative aspect-[10/8]">
+                <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
               </div>
-              <Link href="/">
-                <h1 className="text-lg font-semibold tracking-wide mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h1>
-              </Link>
-              <p className="text-sm text-[#333]/70 mb-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Impedit ducimus, praesentium dolorem quidem, iste voluptatem
-                ipsum consequatur in tenetur repellendus officia ipsam nihil
-                perspiciatis!
-              </p>
-              <div className="flex gap-4 items-center text-sm justify-end">
-                <Link href="/" className="text-[#111111]/80 hover:text-[#111]">
-                  Steve Jobs
+              <div className="flex flex-col p-3 gap-1 outfit">
+                <div className="text-[#333]/60 text-sm  font-bold">
+                  December 30, 2022
+                </div>
+                <Link href="/">
+                  <h1 className="text-lg font-semibold tracking-wide mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h1>
                 </Link>
+                <p className="text-sm text-[#333]/70 mb-1">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Impedit ducimus, praesentium dolorem quidem, iste voluptatem
+                  ipsum consequatur in tenetur repellendus officia ipsam nihil
+                  perspiciatis!
+                </p>
+                <div className="flex gap-4 items-center text-sm justify-end">
+                  <Link
+                    href="/"
+                    className="text-[#111111]/80 hover:text-[#111]"
+                  >
+                    Steve Jobs
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
-            <div className="w-full relative aspect-[10/8]">
-              <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
-            </div>
-            <div className="flex flex-col p-3 gap-1 outfit">
-              <div className="text-[#333]/60 text-sm  font-bold">
-                December 30, 2022
+            <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
+              <div className="w-full relative aspect-[10/8]">
+                <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
               </div>
-              <Link href="/">
-                <h1 className="text-lg font-semibold tracking-wide mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h1>
-              </Link>
-              <p className="text-sm text-[#333]/70 mb-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Impedit ducimus, praesentium dolorem quidem, iste voluptatem
-                ipsum consequatur in tenetur repellendus officia ipsam nihil
-                perspiciatis!
-              </p>
-              <div className="flex gap-4 items-center text-sm justify-end">
-                <Link href="/" className="text-[#111111]/80 hover:text-[#111]">
-                  Steve Jobs
+              <div className="flex flex-col p-3 gap-1 outfit">
+                <div className="text-[#333]/60 text-sm  font-bold">
+                  December 30, 2022
+                </div>
+                <Link href="/">
+                  <h1 className="text-lg font-semibold tracking-wide mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h1>
                 </Link>
+                <p className="text-sm text-[#333]/70 mb-1">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Impedit ducimus, praesentium dolorem quidem, iste voluptatem
+                  ipsum consequatur in tenetur repellendus officia ipsam nihil
+                  perspiciatis!
+                </p>
+                <div className="flex gap-4 items-center text-sm justify-end">
+                  <Link
+                    href="/"
+                    className="text-[#111111]/80 hover:text-[#111]"
+                  >
+                    Steve Jobs
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
-            <div className="w-full relative aspect-[10/8]">
-              <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
-            </div>
-            <div className="flex flex-col p-3 gap-1 outfit">
-              <div className="text-[#333]/60 text-sm  font-bold">
-                December 30, 2022
+            <div className="flex-1 bg-white drop-shadow-md rounded flex flex-col">
+              <div className="w-full relative aspect-[10/8]">
+                <Image src="/img3.jpg" layout="fill" objectFit="cover" alt="" />
               </div>
-              <Link href="/">
-                <h1 className="text-lg font-semibold tracking-wide mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h1>
-              </Link>
-              <p className="text-sm text-[#333]/70 mb-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Impedit ducimus, praesentium dolorem quidem, iste voluptatem
-                ipsum consequatur in tenetur repellendus officia ipsam nihil
-                perspiciatis!
-              </p>
-              <div className="flex gap-4 items-center text-sm justify-end">
-                <Link href="/" className="text-[#111111]/80 hover:text-[#111]">
-                  Steve Jobs
+              <div className="flex flex-col p-3 gap-1 outfit">
+                <div className="text-[#333]/60 text-sm  font-bold">
+                  December 30, 2022
+                </div>
+                <Link href="/">
+                  <h1 className="text-lg font-semibold tracking-wide mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h1>
                 </Link>
+                <p className="text-sm text-[#333]/70 mb-1">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Impedit ducimus, praesentium dolorem quidem, iste voluptatem
+                  ipsum consequatur in tenetur repellendus officia ipsam nihil
+                  perspiciatis!
+                </p>
+                <div className="flex gap-4 items-center text-sm justify-end">
+                  <Link
+                    href="/"
+                    className="text-[#111111]/80 hover:text-[#111]"
+                  >
+                    Steve Jobs
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

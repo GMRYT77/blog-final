@@ -14,7 +14,7 @@ const Hero = () => {
         ss(0);
       }
     }, 5000);
-    console.log(s);
+
     setCurrPost(s);
 
     let dots = document.getElementsByClassName("dots");
@@ -119,7 +119,7 @@ const Hero = () => {
               >
                 {posts[currPost].category}
               </Link>
-              <Link href="/" className="text-3xl tracking-wide outfit mb-3">
+              <Link href="/" className="text-4xl tracking-wider zilla mb-3">
                 {posts[currPost].heading}
               </Link>
               <div className="flex gap-4 items-center text-white/70  text-sm">

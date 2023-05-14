@@ -24,6 +24,25 @@ const Navbar = () => {
             <Link href="/" className="hover:text-white">
               Latest
             </Link>
+            <Link href="/" className=" relative group">
+              <span className="hover:text-white">Categories</span>
+              <div className="absolute top-full hidden group-hover:block pt-6  -left-2 min-w-[200%]">
+                <ul className=" p-2  bg-t flex flex-col ">
+                  <Link href="/" className="w-fit py-1 px-2 hover:text-white">
+                    dkakndkn
+                  </Link>
+                  <Link href="/" className="w-fit py-1 px-2 hover:text-white">
+                    ksduns
+                  </Link>
+                  <Link href="/" className="w-fit py-1 px-2 hover:text-white">
+                    kenjsns
+                  </Link>
+                  <Link href="/" className="w-fit py-1 px-2 hover:text-white">
+                    dkssus
+                  </Link>
+                </ul>
+              </div>
+            </Link>
             <Link href="/" className="hover:text-white">
               Blog
             </Link>

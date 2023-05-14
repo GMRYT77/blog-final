@@ -448,6 +448,27 @@
     font-family: "Steelfish";
     src: url("../styles/fonts/steelfish/steelfish bd.otf");
   }
+  @font-face {
+    font-family: "Prata";
+    src: url("../styles/fonts/Prata/Prata-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Zilla";
+    src: url("../styles/fonts/Zilla_Slab/ZillaSlab-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Zilla-I";
+    src: url("../styles/fonts/Zilla_Slab/ZillaSlab-Italic.ttf");
+  }
+  .prata {
+    font-family: "Prata", sans-serif;
+  }
+  .zilla {
+    font-family: "Zilla", sans-serif;
+  }
+  .zilla-i {
+    font-family: "Zilla-I", sans-serif;
+  }
   .steelfish {
     font-family: "Steelfish", sans-serif;
   }
