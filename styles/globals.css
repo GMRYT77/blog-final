@@ -150,6 +150,7 @@
   /* width */
   .scrolly-d::-webkit-scrollbar {
     width: 8px;
+    position: relative;
   }
   /* Track */
   .scrolly-d::-webkit-scrollbar-track {

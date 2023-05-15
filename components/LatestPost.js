@@ -9,16 +9,16 @@ const Loading = () => {
 };
 
 const LatestPost = () => {
-  const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const a = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
-    <section className="w-full bg-[#f2f2f2]">
-      <div className="cont flex flex-col gap-12 mt-8 mb-8 ">
-        <div className="flex flex-col gap-6 mt-16">
-          <h2 className="mukta text-3xl font-semibold tracking-wide text-[#333] gap-4 flex items-center">
+    <section className="w-full bg-[#f2f2f2] text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
+      <div className="cont flex flex-col gap-12">
+        <div className="flex flex-col gap-6 ">
+          <h2 className="mukta text-[190%] font-semibold tracking-wide text-[#333] gap-4 flex items-center w-fit ">
             <TbNorthStar className="text-yellow-600" />
-            Latest Posts
+            Latest Post
           </h2>
-          <div className="w-full flex gap-8 relative flex-wrap justify-between">
+          <div className="w-full flex gap-8 relative flex-wrap justify-between pl-2 pr-4">
             {a.map((e, i) => {
               return (
                 <Suspense key={i} fallback={<Loading />}>
