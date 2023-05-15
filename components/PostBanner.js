@@ -12,12 +12,12 @@ const PostBanner = (props) => {
       }`}
     >
       <div
-        className={`sm:w-[65%] w-full  flex flex-col  font-semibold text-[#333]/90 px-3 py-4 ${
+        className={`sm:w-[65%] w-full  flex flex-col gap-2 font-semibold text-[#333]/90 px-3 py-4 ${
           props.reverse === true ? " sm:pr-3 sm:pl-8" : "sm:pr-7 sm:pl-3"
         }`}
       >
-        <Link href="">
-          <h1 className="text-[170%] sora tracking-wide mb-2">
+        <Link href="/">
+          <h1 className="text-[170%] sora tracking-wide leading-8">
             China flight attendants advised to wear diapers for Covid protection
           </h1>
         </Link>
@@ -26,6 +26,15 @@ const PostBanner = (props) => {
           odio, illo repellat perferendis quis consequatur blanditiis temporibus
           ab excepturi corrupti
         </p>
+        <div
+          className={`w-full flex justify-start ${
+            props.reverse === true ? "sm:justify-end" : ""
+          }`}
+        >
+          <button className="relative px-6 pt-[.3rem] pb-[.25rem] w-fit rounded-md bg-neutral-700 text-white sora mr-2 mt-2">
+            Read More
+          </button>
+        </div>
       </div>
       <div className="w-full sm:w-[35%] relative h-[140px] sm:h-full group bg-[#333] scale-105 sm:scale-[1.2] rounded-xl sm:rounded-[20px] overflow-hidden">
         <div className="absolute top-0 w-full px-3 pt-5 z-30">
