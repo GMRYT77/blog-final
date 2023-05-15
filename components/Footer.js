@@ -27,19 +27,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full text-white  bg-t mt-6">
+    <footer className="w-full text-white px-2   bg-t mt-6">
       <div className="cont flex flex-col">
-        <div className="w-full max-w-[800px] gap-12 mx-auto flex py-20 justify-between ">
-          <div className="w-full max-w-[360px] flex flex-col outfit justify-center ">
-            <h4 className="text-4xl  tracking-wide font-semibold mb-4 leading-[54px]">
+        <div className="w-full max-w-[800px] gap-8 md:gap-12 mx-auto flex sm:px-5 px-2 py-14 md:py-20 justify-between md:flex-row flex-col items-center">
+          <div className="w-full max-w-[540px] md:max-w-[360px] flex flex-col outfit justify-center ">
+            <h4 className="text-3xl md:text-4xl  tracking-wide font-semibold mb-2 md:mb-4 leading-[44px] md:leading-[54px]">
               Subscribe to Our Monthly Newsletter
             </h4>
-            <p className="text-lg text-white/70 tracking-wide leading-[28px]">
+            <p className="md:text-lg text-md text-white/70 tracking-wide leading-[28px]">
               Stay up-to-date about latest tech and new world. Unsubscribe at
               anytime!
             </p>
           </div>
-          <form className="w-full max-w-[360px] flex flex-col gap-4">
+          <form className="w-full max-w-[540px] md:max-w-[360px] flex flex-col gap-4">
             <div className="flex relative flex-col">
               <input
                 type="text"
@@ -89,9 +89,9 @@ const Footer = () => {
             </div>
           </form>
         </div>
-        <div className="flex border-t-[1px] border-t-[#a1a1a1]/60 py-6 justify-between items-center outfit">
-          <div className=" flex-1">The DOS Company</div>
-          <div className="flex flex-1 justify-center gap-4 text-sm text-white/70">
+        <div className="flex flex-col-reverse gap-4 md:gap-0 md:flex-row border-t-[1px] border-t-[#a1a1a1]/60 py-6 justify-between items-center outfit">
+          <div className="text-sm tex-white/80">The DOS Company © 2023</div>
+          <div className="flex flex-1 flex-wrap justify-center gap-2 md:gap-4 text-sm text-white/70">
             <Link href="/" className="hover:text-white">
               Privacy Policy
             </Link>
@@ -101,8 +101,11 @@ const Footer = () => {
             <Link href="/" className="hover:text-white">
               Cookies
             </Link>
+            <Link href="/" className="hover:text-white">
+              About
+            </Link>
           </div>
-          <div className="flex flex-1 justify-end gap-5 max-w-[60%] text-xl mb-2 ">
+          <div className="flex justify-end gap-7 md:gap-5 max-w-[60%] text-2xl md:text-xl mb-2 ">
             <Link href="/">
               <BsFacebook className="hover:text-blue-800 transition-colors" />
             </Link>

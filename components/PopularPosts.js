@@ -13,29 +13,29 @@ const PopularPosts = () => {
   const a = [1, 2, 3, 4];
   return (
     <section className="w-full bg-[#f2f2f2]">
-      <div className="cont flex flex-col gap-12 mt-16 mb-8 ">
-        <div className="flex flex-col gap-8 w-full text-center ">
-          <h2 className="mukta text-3xl font-semibold tracking-wide text-[#333] gap-4 flex items-center w-fit ">
+      <div className="cont flex flex-col gap-12 text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
+        <div className="relative flex flex-col gap-3 sm:gap-5 md:gap-8 w-full ">
+          <h2 className="mukta text-[190%] font-semibold tracking-wide text-[#333] gap-4 flex items-center w-fit ">
             <TbNorthStar className="text-yellow-600" />
             Most Popular Topics
           </h2>
-          <div className="flex gap-10 flex-wrap justify-between">
-            <span className="w-[80px] h-[80px] rounded-full bg-blue-300"></span>
-            <span className="w-[80px] h-[80px] rounded-full bg-blue-300"></span>
-            <span className="w-[80px] h-[80px] rounded-full bg-blue-300"></span>
-            <span className="w-[80px] h-[80px] rounded-full bg-blue-300"></span>
-            <span className="w-[80px] h-[80px] rounded-full bg-blue-300"></span>
-            <span className="w-[80px] h-[80px] rounded-full bg-blue-300"></span>
-            <span className="w-[80px] h-[80px] rounded-full bg-blue-300"></span>
+          <div className="flex gap-4 xs:gap-6 sm:gap-8 relative md:gap-10 scrollbar-hide px-2 md:px-4 w-full overflow-x-scroll">
+            <span className="md:min-w-[80px] min-w-[64px] md:min-h-[80px] min-h-[64px] rounded-full bg-blue-300"></span>
+            <span className="md:min-w-[80px] min-w-[64px] md:min-h-[80px] min-h-[64px] rounded-full bg-blue-300"></span>
+            <span className="md:min-w-[80px] min-w-[64px] md:min-h-[80px] min-h-[64px] rounded-full bg-blue-300"></span>
+            <span className="md:min-w-[80px] min-w-[64px] md:min-h-[80px] min-h-[64px] rounded-full bg-blue-300"></span>
+            <span className="md:min-w-[80px] min-w-[64px] md:min-h-[80px] min-h-[64px] rounded-full bg-blue-300"></span>
+            <span className="md:min-w-[80px] min-w-[64px] md:min-h-[80px] min-h-[64px] rounded-full bg-blue-300"></span>
+            <span className="md:min-w-[80px] min-w-[64px] md:min-h-[80px] min-h-[64px] rounded-full bg-blue-300"></span>
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 mt-14 mb-14">
-          <h2 className="mukta text-3xl font-semibold tracking-wide text-[#333] gap-4 flex items-center">
+        <div className="flex flex-col gap-6 px-2 sm:px-4 md:px-0">
+          <h2 className="mukta text-[190%] font-semibold tracking-wide text-[#333] gap-4 flex items-center">
             <TbNorthStar className="text-yellow-600" />
             Popular Posts
           </h2>
-          <div className="w-full grid grid-cols-2  gap-14 relative ">
+          <div className="w-full grid md:grid-cols-2  gap-6 sm:gap-8 md:gap-14 relative ">
             {a.map((e, i) => {
               return (
                 <Suspense key={i} fallback={<Loading />}>

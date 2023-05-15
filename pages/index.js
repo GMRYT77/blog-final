@@ -8,14 +8,14 @@ import SEO from "@/components/SEO";
 
 export default function Home() {
   return (
-    <section className="w-[100vw] h-full flex flex-col ">
+    <section className="w-[100vw] h-full flex flex-col gap-14">
       <SEO title="Home Page" />
       <Hero />
       <PopularPosts />
-      <Quote />
+      {/*    <Quote />
       <LatestPost />
       <PostSec />
-      <Authors />
+      <Authors /> */}
     </section>
   );
 }
