@@ -112,7 +112,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="md:w-1/3 w-full flex flex-col gap-6 px-2 sm:px-4 md:px-0 text-[.7rem] xs:text-[.9rem] sm:text-[1rem]">
-          <div className="relative w-[94%] aspect-[12/6] xxs:aspect-[12/5] xs:aspect-[12/4] md:w-full md:h-1/2">
+          <div className="relative w-full aspect-[12/6] xxs:aspect-[12/5] md:w-full md:h-1/2">
             <Image src="/img2.jpg" layout="fill" objectFit="cover" alt="" />
             <div className="absolute z-[30] w-full bottom-0 flex flex-col gap-1 md:gap-2 pb-2 px-2 xs:px-4 md:px-5 ">
               <Link
@@ -134,7 +134,7 @@ const Hero = () => {
             </div>
             <div className="absolute w-full h-full bg-[#111111] opacity-[.35] z-20"></div>
           </div>
-          <div className="relative w-[94%] aspect-[12/6] xxs:aspect-[12/5] xs:aspect-[12/4] md:w-full md:h-1/2">
+          <div className="relative w-full aspect-[12/6] xxs:aspect-[12/5]  md:w-full md:h-1/2">
             <Image src="/img2.jpg" layout="fill" objectFit="cover" alt="" />
             <div className="absolute z-[30] w-full bottom-0 flex flex-col gap-2 pb-2 px-5 ">
               <Link
