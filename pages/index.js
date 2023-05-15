@@ -13,8 +13,8 @@ export default function Home() {
       <Hero />
       <PopularPosts />
       <Quote />
-      {/* <LatestPost />
-      <PostSec />
+      <LatestPost />
+      {/*  <PostSec />
       <Authors /> */}
     </section>
   );

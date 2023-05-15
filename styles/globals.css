@@ -149,19 +149,19 @@
   }
   /* width */
   .scrolly-d::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
   /* Track */
   .scrolly-d::-webkit-scrollbar-track {
-    background: transparent;
+    background: #a1a1a1;
   }
   /* Handle */
   .scrolly-d::-webkit-scrollbar-thumb {
-    background: #4c4848;
+    background: #333;
   }
   /* Handle on hover */
   .scrolly-d::-webkit-scrollbar-thumb:hover {
-    background: #5c5858;
+    background: #111;
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
