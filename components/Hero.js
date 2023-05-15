@@ -112,19 +112,26 @@ const Hero = () => {
           </div>
         </div>
         <div className="md:w-1/3 w-full flex flex-col gap-6 px-2 sm:px-4 md:px-0 text-[.7rem] xs:text-[.9rem] sm:text-[1rem]">
-          <div className="relative w-full aspect-[12/6] xxs:aspect-[12/5] md:w-full md:h-1/2">
-            <Image src="/img2.jpg" layout="fill" objectFit="cover" alt="" />
+          <div className="relative w-full aspect-[12/6] xxs:aspect-[12/5] md:w-full md:h-1/2 group">
+            <div className="absolute w-full h-full bg-[#111111] opacity-[.35] z-10"></div>
+            <Image
+              src="/img2.jpg"
+              layout="fill"
+              objectFit="cover"
+              alt=""
+              className="group-hover:opacity-80 z-20"
+            />
             <div className="absolute z-[30] w-full bottom-0 flex flex-col gap-1 md:gap-2 pb-2 px-2 xs:px-4 md:px-5 ">
               <Link
                 href="/"
-                className="outfit tracking-wide text-[60%] px-2 pt-1 pb-[.15rem] rounded-md bg-blue-400/70 w-fit "
+                className="outfit tracking-wide text-[75%] px-2 pt-1 pb-[.15rem] rounded-md bg-blue-400/70 w-fit "
               >
                 Music
               </Link>
-              <Link href="/" className="text-[100%] tracking-wide sora">
+              <Link href="/" className="text-[105%] tracking-wide sora">
                 Lorem, ipsum dolor sit amet consectetur adipisicing
               </Link>
-              <div className="flex gap-4 items-center text-white/70  text-[70%]">
+              <div className="flex gap-4 items-center text-white/70  text-[80%]">
                 <Link href="/" className="hover:text-white e">
                   Steve Jobs
                 </Link>
@@ -132,29 +139,34 @@ const Hero = () => {
                 <span>December 19, 2023</span>
               </div>
             </div>
-            <div className="absolute w-full h-full bg-[#111111] opacity-[.35] z-20"></div>
           </div>
-          <div className="relative w-full aspect-[12/6] xxs:aspect-[12/5]  md:w-full md:h-1/2">
-            <Image src="/img2.jpg" layout="fill" objectFit="cover" alt="" />
-            <div className="absolute z-[30] w-full bottom-0 flex flex-col gap-2 pb-2 px-5 ">
+          <div className="relative w-full aspect-[12/6] xxs:aspect-[12/5] md:w-full md:h-1/2 group">
+            <div className="absolute w-full h-full bg-[#111111] opacity-[.35] z-10"></div>
+            <Image
+              src="/img2.jpg"
+              layout="fill"
+              objectFit="cover"
+              alt=""
+              className="group-hover:opacity-80 z-20"
+            />
+            <div className="absolute z-[30] w-full bottom-0 flex flex-col gap-1 md:gap-2 pb-2 px-2 xs:px-4 md:px-5 ">
               <Link
                 href="/"
-                className="outfit tracking-wide text-[60%]  px-2 pt-1 pb-[.15rem] rounded-md bg-blue-400/70 w-fit "
+                className="outfit tracking-wide text-[75%] px-2 pt-1 pb-[.15rem] rounded-md bg-blue-400/70 w-fit "
               >
                 Music
               </Link>
               <Link href="/" className="text-[105%] tracking-wide sora">
                 Lorem, ipsum dolor sit amet consectetur adipisicing
               </Link>
-              <div className="flex gap-4 items-center text-white/70  text-[70%]">
-                <Link href="/" className="hover:text-white ">
+              <div className="flex gap-4 items-center text-white/70  text-[80%]">
+                <Link href="/" className="hover:text-white e">
                   Steve Jobs
                 </Link>
                 <span className="w-[6px] h-[6px] rounded-full mt-1 bg-white/70"></span>
                 <span>December 19, 2023</span>
               </div>
             </div>
-            <div className="absolute w-full h-full bg-[#111111] opacity-[.35] z-20"></div>
           </div>
         </div>
       </div>

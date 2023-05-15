@@ -12,8 +12,8 @@ export default function Home() {
       <SEO title="Home Page" />
       <Hero />
       <PopularPosts />
-      {/*    <Quote />
-      <LatestPost />
+      <Quote />
+      {/* <LatestPost />
       <PostSec />
       <Authors /> */}
     </section>
