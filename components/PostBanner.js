@@ -5,27 +5,29 @@ import React from "react";
 const PostBanner = (props) => {
   return (
     <div
-      className={`relative w-full bg-white aspect-[10/4] flex mb-12 rounded-[20px] drop-shadow ${
-        props.reverse === true ? "flex-row-reverse" : ""
+      className={`relative w-full bg-white aspect-[10/4] flex mb-2 rounded-[20px] drop-shadow text-[.7rem] sm:text-[.85rem] md:text-[1rem] ${
+        props.reverse === true
+          ? "sm:flex-row-reverse flex-col-reverse"
+          : "sm:flex-row flex-col-reverse"
       }`}
     >
       <div
-        className={`w-[65%] flex flex-col  font-semibold text-[#333]/90 py-2 ${
-          props.reverse === true ? "pr-3 pl-8" : "pr-7 pl-3"
+        className={`sm:w-[65%] w-full  flex flex-col  font-semibold text-[#333]/90 px-3 py-4 ${
+          props.reverse === true ? " sm:pr-3 sm:pl-8" : "sm:pr-7 sm:pl-3"
         }`}
       >
         <Link href="">
-          <h1 className="text-2xl sora tracking-wide mb-2">
+          <h1 className="text-[170%] sora tracking-wide mb-2">
             China flight attendants advised to wear diapers for Covid protection
           </h1>
         </Link>
-        <p className="outfit text-[.95rem] text-[#333]/60">
+        <p className="outfit text-[90%] text-[#333]/60">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas magni
           odio, illo repellat perferendis quis consequatur blanditiis temporibus
           ab excepturi corrupti
         </p>
       </div>
-      <div className="w-[35%] relative h-full group bg-[#333] scale-[1.2] rounded-[20px] overflow-hidden">
+      <div className="w-full sm:w-[35%] relative h-[140px] sm:h-full group bg-[#333] scale-105 sm:scale-[1.2] rounded-xl sm:rounded-[20px] overflow-hidden">
         <div className="absolute top-0 w-full px-3 pt-5 z-30">
           <Link
             href="/"

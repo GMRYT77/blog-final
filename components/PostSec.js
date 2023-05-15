@@ -18,15 +18,15 @@ const PostSec = () => {
   });
 
   return (
-    <section className="relative w-full bg-[#f2f2f2] pt-10 pb-8">
-      <div className="relative cont flex gap-10">
-        <div className=" relative w-2/3 flex flex-col gap-8 ">
+    <section className="relative w-full ">
+      <div className="relative cont flex gap-10 ">
+        <div className=" relative w-full lg:w-2/3 flex flex-col gap-8 md:gap-12 md:px-8 px-6">
           <PostBanner />
           <PostBanner reverse={true} />
           <PostBanner />
           <PostBanner reverse={true} />
         </div>
-        <div className="relative w-1/3 ml-2">
+        <div className="relative w-1/3 ml-2 hidden lg:block">
           <div
             id="side_id"
             className={` w-full sticky top-[80px] bg-white flex flex-col gap-2 px-3 py-4 rounded-md drop-shadow-md`}

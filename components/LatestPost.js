@@ -41,24 +41,6 @@ const LatestPost = () => {
             <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
               3
             </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              4
-            </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              5
-            </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              6
-            </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              7
-            </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              8
-            </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              9
-            </button>
 
             <button className="relative px-3 pt-2 pb-[.25rem] rounded-bl-md rounded-tr-md bg-neutral-700 text-white sora ml-2">
               Next

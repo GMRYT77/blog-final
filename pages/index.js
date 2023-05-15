@@ -14,8 +14,8 @@ export default function Home() {
       <PopularPosts />
       <Quote />
       <LatestPost />
-      {/*  <PostSec />
-      <Authors /> */}
+      <PostSec />
+      {/*  <Authors /> */}
     </section>
   );
 }
