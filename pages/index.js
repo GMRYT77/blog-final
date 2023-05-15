@@ -15,7 +15,7 @@ export default function Home() {
       <Quote />
       <LatestPost />
       <PostSec />
-      {/*  <Authors /> */}
+      <Authors />
     </section>
   );
 }
