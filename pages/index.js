@@ -5,6 +5,7 @@ import PopularPosts from "@/components/PopularPosts";
 import PostSec from "@/components/PostSec";
 import Quote from "@/components/Quote";
 import SEO from "@/components/SEO";
+import data from "./api/data.json";
 
 export default function Home() {
   return (

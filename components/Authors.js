@@ -9,13 +9,13 @@ const Authors = () => {
     <section>
       <div className="cont flex gap-12 mt-6 flex-col mb-12 text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
         <div className="flex justify-between px-2">
-          <h2 className="mukta text-[190%] font-semibold tracking-wide text-[#333] gap-4 flex items-center w-fit ">
+          <h2 className="mukta text-[190%] font-semibold tracking-wide dark:text-[#f1f1f1] text-[#333] gap-4 flex items-center w-fit ">
             <TbNorthStar className="text-yellow-600" />
             Authors
           </h2>
           <Link
             href="/"
-            className="sora font-medium text-[125%] text-[#333]/60 hover:underline hover:underline-offset-4 flex gap-3 hover:text-[#333] items-center group"
+            className="sora font-medium text-[125%] text-[#333]/60 dark:text-[#f1f1f1]/60 hover:underline hover:underline-offset-4 flex gap-3 hover:text-[#333] items-center group"
           >
             View All
             <BsArrowUpRight className="text-[125%] group-hover:rotate-45 transition-[250ms]" />
@@ -31,11 +31,11 @@ const Authors = () => {
             </Link>
             <Link
               href="/"
-              className="sora text-[140%] font-semibold text-[#333] text-center mb-1 hover:underline"
+              className="sora text-[140%] font-semibold text-[#333] dark:text-[#f1f1f1] text-center mb-1 hover:underline"
             >
               Steve Jobs
             </Link>
-            <span className="outfit text-[110%] text-[#333]/70 text-center">
+            <span className="outfit text-[110%] text-[#333]/70 dark:text-[#f1f1f1]/70 text-center">
               28 Articles
             </span>
           </div>
@@ -48,11 +48,11 @@ const Authors = () => {
             </Link>
             <Link
               href="/"
-              className="sora text-[140%] font-semibold text-[#333] text-center mb-1 hover:underline"
+              className="sora text-[140%] font-semibold text-[#333] dark:text-[#f1f1f1] text-center mb-1 hover:underline"
             >
               Steve Jobs
             </Link>
-            <span className="outfit text-[110%] text-[#333]/70 text-center">
+            <span className="outfit text-[110%] text-[#333]/70 dark:text-[#f1f1f1]/70 text-center">
               28 Articles
             </span>
           </div>
@@ -65,11 +65,11 @@ const Authors = () => {
             </Link>
             <Link
               href="/"
-              className="sora text-[140%] font-semibold text-[#333] text-center mb-1 hover:underline"
+              className="sora text-[140%] font-semibold text-[#333] dark:text-[#f1f1f1] text-center mb-1 hover:underline"
             >
               Steve Jobs
             </Link>
-            <span className="outfit text-[110%] text-[#333]/70 text-center">
+            <span className="outfit text-[110%] text-[#333]/70 dark:text-[#f1f1f1]/70 text-center">
               28 Articles
             </span>
           </div>
@@ -82,11 +82,11 @@ const Authors = () => {
             </Link>
             <Link
               href="/"
-              className="sora text-[140%] font-semibold text-[#333] text-center mb-1 hover:underline"
+              className="sora text-[140%] font-semibold text-[#333] dark:text-[#f1f1f1] text-center mb-1 hover:underline"
             >
               Steve Jobs
             </Link>
-            <span className="outfit text-[110%] text-[#333]/70 text-center">
+            <span className="outfit text-[110%] text-[#333]/70 dark:text-[#f1f1f1]/70 text-center">
               28 Articles
             </span>
           </div>

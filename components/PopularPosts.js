@@ -4,6 +4,7 @@ import React, { Suspense } from "react";
 import { TbNorthStar } from "react-icons/tb";
 import PostCard from "./PostCard";
 import PostImgCard from "./PostImgCard";
+import posts from "@/backend/posts";
 
 const Loading = () => {
   return <div className="">loading ... </div>;
@@ -12,10 +13,10 @@ const Loading = () => {
 const PopularPosts = () => {
   const a = [1, 2, 3, 4];
   return (
-    <section className="w-full bg-[#f2f2f2]">
+    <section className="w-full ">
       <div className="cont flex flex-col gap-12 text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
         <div className="relative flex flex-col gap-3 sm:gap-5 md:gap-8 w-full ">
-          <h2 className="mukta text-[190%] font-semibold tracking-wide text-[#333] gap-4 flex items-center w-fit ">
+          <h2 className="mukta text-[190%] font-semibold tracking-wide text-[#333] dark:text-[#f1f1f1] gap-4 flex items-center w-fit ">
             <TbNorthStar className="text-yellow-600" />
             Most Popular Topics
           </h2>
@@ -31,7 +32,7 @@ const PopularPosts = () => {
         </div>
 
         <div className="flex flex-col gap-6 px-2 sm:px-4 md:px-0">
-          <h2 className="mukta text-[190%] font-semibold tracking-wide text-[#333] gap-4 flex items-center">
+          <h2 className="mukta text-[190%] font-semibold tracking-wide dark:text-[#f1f1f1] text-[#333] gap-4 flex items-center">
             <TbNorthStar className="text-yellow-600" />
             Popular Posts
           </h2>

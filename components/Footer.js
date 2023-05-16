@@ -39,13 +39,19 @@ const Footer = () => {
               anytime!
             </p>
           </div>
-          <form className="w-full max-w-[540px] md:max-w-[360px] flex flex-col gap-4">
+          <form
+            className="w-full max-w-[540px] md:max-w-[360px] flex flex-col gap-4"
+            method="post"
+            action="/api/newsletter"
+          >
             <div className="flex relative flex-col">
               <input
                 type="text"
-                name="Name"
+                name="name"
                 id="nl_name"
                 required
+                minLength={3}
+                maxLength={24}
                 onChange={nlNameChange}
                 className="outline-none border-[1px] border-[#a1a1a1]/70 rounded-sm px-3 py-3 bg-transparent peer focus:border-[#cfcfcf]"
               />
@@ -62,7 +68,7 @@ const Footer = () => {
             <div className="flex relative flex-col">
               <input
                 type="email"
-                name="Name"
+                name="email"
                 id="nl_email"
                 required
                 onChange={nlEmailChange}
@@ -81,7 +87,6 @@ const Footer = () => {
             <div className="relative w-full group">
               <input
                 type="submit"
-                name="submit"
                 id="nl_submit"
                 className="outline-none border-[1px] w-full border-[#a1a1a1]/70 rounded-sm px-3 py-3 hover:bg-neutral-800 cursor-pointer text-left outfit tracking-wider focus:border-[#cfcfcf]"
               />
@@ -92,7 +97,7 @@ const Footer = () => {
         <div className="flex flex-col-reverse gap-4 md:gap-0 md:flex-row border-t-[1px] border-t-[#a1a1a1]/60 py-6 justify-between items-center outfit">
           <div className="text-sm tex-white/80">The DOS Company © 2023</div>
           <div className="flex flex-1 flex-wrap justify-center gap-2 md:gap-4 text-sm text-white/70">
-            <Link href="/" className="hover:text-white">
+            <Link href="/c/privacy-policy" className="hover:text-white">
               Privacy Policy
             </Link>
             <Link href="/" className="hover:text-white">
@@ -101,7 +106,7 @@ const Footer = () => {
             <Link href="/" className="hover:text-white">
               Cookies
             </Link>
-            <Link href="/" className="hover:text-white">
+            <Link href="/c/about" className="hover:text-white">
               About
             </Link>
           </div>

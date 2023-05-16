@@ -1,0 +1,127 @@
+{
+  "data": {
+    "posts": [
+      {
+        "title": "Erit est pulcherrime",
+        "authors": [
+          {
+            "slug": "leanne-graham",
+            "name": "Leanne Graham",
+            "id": "ckwgh4bw83ec40a65sg9fw1dy"
+          },
+          {
+            "slug": "admin",
+            "name": "Admin",
+            "id": "clhpyo1ho5efs0bpezso5777b"
+          }
+        ],
+        "coverImage": {
+          "url": "https://media.graphassets.com/DXAO4IwOTz60VkoVuF9w"
+        },
+        "slug": "erit-est-pulcherrime",
+        "tags": ["JavaScript", "HTML", "CSS"],
+        "publishedAt": null
+      },
+      {
+        "title": "Sors ventos",
+        "authors": [
+          {
+            "slug": "leanne-graham",
+            "name": "Leanne Graham",
+            "id": "ckwgh4bw83ec40a65sg9fw1dy"
+          },
+          {
+            "slug": "admin",
+            "name": "Admin",
+            "id": "clhpyo1ho5efs0bpezso5777b"
+          }
+        ],
+        "coverImage": {
+          "url": "https://media.graphassets.com/orzLgyMZQHO0epBKhZOk"
+        },
+        "slug": "sors-ventos",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "publishedAt": null
+      },
+      {
+        "title": "In istis",
+        "authors": [
+          {
+            "slug": "leanne-graham",
+            "name": "Leanne Graham",
+            "id": "ckwgh4bw83ec40a65sg9fw1dy"
+          },
+          {
+            "slug": "admin",
+            "name": "Admin",
+            "id": "clhpyo1ho5efs0bpezso5777b"
+          }
+        ],
+        "coverImage": {
+          "url": "https://media.graphassets.com/mwee7LhOTZSpOMGkQaUg"
+        },
+        "slug": "in-istis",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "publishedAt": null
+      },
+      {
+        "title": "Diva sonum rupit umbras caerulus siderea",
+        "authors": [
+          {
+            "slug": "leanne-graham",
+            "name": "Leanne Graham",
+            "id": "ckwgh4bw83ec40a65sg9fw1dy"
+          },
+          {
+            "slug": "admin",
+            "name": "Admin",
+            "id": "clhpyo1ho5efs0bpezso5777b"
+          }
+        ],
+        "coverImage": {
+          "url": "https://media.graphassets.com/Wyu4DkqQQyVFUHKKitAQ"
+        },
+        "slug": "diva-sonum-rupit-umbras-caerulus-siderea",
+        "tags": ["JavaScript"],
+        "publishedAt": null
+      },
+      {
+        "title": "Murmure splendidus invidia merui usus flammas clamoribus",
+        "authors": [
+          {
+            "slug": "leanne-graham",
+            "name": "Leanne Graham",
+            "id": "ckwgh4bw83ec40a65sg9fw1dy"
+          },
+          {
+            "slug": "admin",
+            "name": "Admin",
+            "id": "clhpyo1ho5efs0bpezso5777b"
+          }
+        ],
+        "coverImage": {
+          "url": "https://media.graphassets.com/hitwoSUdTIeMVZd963yB"
+        },
+        "slug": "murmure-splendidus-invidia-merui-usus-flammas-clamoribus",
+        "tags": ["HTML", "CSS"],
+        "publishedAt": null
+      },
+      {
+        "title": "Sports enthusiast and My passion lies in Podcast.",
+        "authors": [
+          {
+            "slug": "admin",
+            "name": "Admin",
+            "id": "clhpyo1ho5efs0bpezso5777b"
+          }
+        ],
+        "coverImage": {
+          "url": "https://media.graphassets.com/pHTOFz0T5qWYmqUlQF2Q"
+        },
+        "slug": "sports-enthusiast-and-my-passion-lies-in-podcast",
+        "tags": ["Tag1 ", "tag2"],
+        "publishedAt": null
+      }
+    ]
+  }
+}

@@ -29,7 +29,7 @@ const PostSec = () => {
         <div className="relative w-1/3 ml-2 hidden lg:block">
           <div
             id="side_id"
-            className={` w-full sticky top-[80px] bg-white flex flex-col gap-2 px-3 py-4 rounded-md drop-shadow-md`}
+            className={` w-full sticky top-[80px] bg-white dark:bg-[#1a1a1a] flex flex-col gap-2 px-3 py-4 rounded-md drop-shadow-md`}
           >
             <h3 className="mukta text-lg tracking-wide font-semibold mb-1">
               Recent Posts
@@ -42,7 +42,7 @@ const PostSec = () => {
                   </Link>
                   <span>20 Dec, 2022</span>
                 </div>
-                <Link href="/" className="text-[.8rem] sora font-medium">
+                <Link href="/" className="text-[.8rem] sora font-medium ">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia, ipsam.
                 </Link>
@@ -222,7 +222,7 @@ const PostSec = () => {
               </div>
               <Link
                 href="/"
-                className="w-fit px-6 py-1 outfit border-[.6px] border-neutral-700/70 rounded-full text-[#333]/70 hover:text-[#333] font-medium"
+                className="w-fit px-6 py-1 outfit border-[.6px] border-neutral-700/70 rounded-full text-[#333]/70 dark:text-[#f2f2f2]/70 hover:text-[#333] font-medium"
               >
                 View All
               </Link>
