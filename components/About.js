@@ -9,18 +9,19 @@ const About = () => {
         </h1>
         <p className="outfit tracking-wide text-[#333] text-[116%] ">
           Welcome to BlogBole, your go-to source for news, insights, and
-          engaging content on a wide range of topics. Whether you're looking for
-          the latest news headlines, thought-provoking opinion pieces, or
-          helpful guides, we've got you covered. Our team of dedicated writers
-          and contributors work tirelessly to provide you with accurate and
-          timely information to keep you informed and entertained.
+          engaging content on a wide range of topics. Whether you&#39; re
+          looking for the latest news headlines, thought-provoking opinion
+          pieces, or helpful guides, we&#39; ve got you covered. Our team of
+          dedicated writers and contributors work tirelessly to provide you with
+          accurate and timely information to keep you informed and entertained.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
           At BlogBole, we believe in the power of information. We understand
-          that staying updated in today's fast-paced world can be a challenge,
-          which is why we strive to deliver comprehensive coverage on a variety
-          of subjects. From breaking news stories to in-depth analyses, we aim
-          to provide you with a holistic view of current events and trends.
+          that staying updated in today&#39; s fast-paced world can be a
+          challenge, which is why we strive to deliver comprehensive coverage on
+          a variety of subjects. From breaking news stories to in-depth
+          analyses, we aim to provide you with a holistic view of current events
+          and trends.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
           Our platform is designed to cater to a diverse audience with varying
@@ -47,15 +48,16 @@ const About = () => {
           discussions and encourage critical thinking among our readers.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
-          At BlogBole, we understand that everyone's time is valuable. That's
-          why we strive to present information in a concise and easily
-          digestible manner. Our articles are crafted to deliver the essential
-          details while maintaining clarity and readability. Whether you have a
-          few minutes to spare or prefer an in-depth exploration of a topic, we
-          offer a variety of article formats to cater to your preferences.
+          At BlogBole, we understand that everyone&#39; s time is valuable.
+          That&#39; s why we strive to present information in a concise and
+          easily digestible manner. Our articles are crafted to deliver the
+          essential details while maintaining clarity and readability. Whether
+          you have a few minutes to spare or prefer an in-depth exploration of a
+          topic, we offer a variety of article formats to cater to your
+          preferences.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
-          We also value our readers' engagement and encourage active
+          We also value our readers&#39; engagement and encourage active
           participation through comments, feedback, and social media
           interaction. We believe that the exchange of ideas and perspectives
           strengthens our collective knowledge and fosters a sense of community.
@@ -85,7 +87,7 @@ const About = () => {
           information that empowers you to make informed decisions and enriches
           your understanding of the world around you. We invite you to join us
           on this journey of knowledge and exploration as we strive to create a
-          more informed and connected global community.
+          more &apos;informed&lsquo; and &#39;connected&rsquo; global community.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
           Thank you for visiting BlogBole. We look forward to serving you with
