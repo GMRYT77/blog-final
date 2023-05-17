@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState, Suspense } from "react";
-import { useMemo } from "react/cjs/react.production.min";
 
 const Loading = () => {
   return <p>Loading ...</p>;
