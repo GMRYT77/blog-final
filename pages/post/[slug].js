@@ -5,21 +5,21 @@ import React, { useState, useEffect } from "react";
 
 const PostSlug = ({ post }) => {
   const [d, setD] = useState(post.date);
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
   useEffect(() => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
     let day = d.slice(8, 10);
     let m = d.slice(5, 7);
     let month = months[parseInt(m)];
