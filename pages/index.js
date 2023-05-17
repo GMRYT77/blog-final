@@ -1,10 +1,13 @@
 import Authors from "@/components/Authors";
 import Hero from "@/components/Hero";
 import LatestPost from "@/components/LatestPost";
-import PopularPosts from "@/components/PopularPosts";
 import PostSec from "@/components/PostSec";
 import Quote from "@/components/Quote";
 import SEO from "@/components/SEO";
+import dynamic from "next/dynamic";
+const PopularPosts = dynamic(() => import("@/components/PopularPosts"), {
+  suspense: true,
+});
 
 import { getPosts } from "@/backend/index.js";
 

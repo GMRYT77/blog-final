@@ -5,7 +5,7 @@ const About = () => {
     <section className="w-full text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem] lg:text-[1.15rem]">
       <div className="cont my-8 flex flex-col gap-8 px-8">
         <h1 className="sora text-[200%] font-semibold tracking-wide mb-4">
-          About
+          About Us
         </h1>
         <p className="outfit tracking-wide text-[#333] text-[116%] ">
           Welcome to [Website Name], your go-to source for news, insights, and

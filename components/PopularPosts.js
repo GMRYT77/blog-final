@@ -6,12 +6,7 @@ import PostCard from "./PostCard";
 import PostImgCard from "./PostImgCard";
 import posts from "@/backend/posts";
 
-const Loading = () => {
-  return <div className="">loading ... </div>;
-};
-
 const PopularPosts = (props) => {
-  const a = [1, 2, 3, 4];
   const posts = props.posts;
   console.log(posts[0]);
   return (
@@ -42,19 +37,18 @@ const PopularPosts = (props) => {
             {posts.map((e, i) => {
               if (i < 8) {
                 return (
-                  <Suspense key={i} fallback={<Loading />}>
-                    <PostImgCard
-                      coverImage={e.coverImage.url}
-                      category={e.category.category}
-                      catgSlug={e.category.slug}
-                      author={e.authors[0].name}
-                      autSlug={e.authors[0].slug}
-                      autImg={e.authors[0].picture.url}
-                      slug={e.slug}
-                      title={e.title}
-                      date={e.date}
-                    />
-                  </Suspense>
+                  <PostImgCard
+                    key={i}
+                    coverImage={e.coverImage.url}
+                    category={e.category.category}
+                    catgSlug={e.category.slug}
+                    author={e.authors[0].name}
+                    autSlug={e.authors[0].slug}
+                    autImg={e.authors[0].picture.url}
+                    slug={e.slug}
+                    title={e.title}
+                    date={e.date}
+                  />
                 );
               } else {
                 return;

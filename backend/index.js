@@ -24,3 +24,43 @@ export const getPosts = async () => {
   const result = await request(graphqlAPI, query);
   return result.posts;
 };
+export const getPostDetails = async (slug) => {
+  const query = gql`
+    query GetPostDetails($slug: String!) {
+      post(where: { slug: $slug }) {
+        id
+        category {
+          ... on Category {
+            id
+            category
+            slug
+          }
+        }
+        coverImage {
+          url
+        }
+        date
+        slug
+        title
+        tags
+        authors {
+          bio
+          name
+          slug
+          picture {
+            url
+          }
+        }
+        content {
+          html
+          json
+          markdown
+          raw
+          text
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.post;
+};
