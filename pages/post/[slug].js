@@ -28,7 +28,7 @@ const PostSlug = ({ post }) => {
     setD(newDate);
     const l = document.getElementById("POST_DIV");
     l.innerHTML = post.content.html;
-  }, [d, post.content.html, months]);
+  }, [d, post.content.html]);
   console.log(post);
 
   return (
