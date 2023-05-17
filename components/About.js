@@ -8,7 +8,7 @@ const About = () => {
           About Us
         </h1>
         <p className="outfit tracking-wide text-[#333] text-[116%] ">
-          Welcome to [Website Name], your go-to source for news, insights, and
+          Welcome to BlogBole, your go-to source for news, insights, and
           engaging content on a wide range of topics. Whether you're looking for
           the latest news headlines, thought-provoking opinion pieces, or
           helpful guides, we've got you covered. Our team of dedicated writers
@@ -16,12 +16,11 @@ const About = () => {
           timely information to keep you informed and entertained.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
-          At [Website Name], we believe in the power of information. We
-          understand that staying updated in today's fast-paced world can be a
-          challenge, which is why we strive to deliver comprehensive coverage on
-          a variety of subjects. From breaking news stories to in-depth
-          analyses, we aim to provide you with a holistic view of current events
-          and trends.
+          At BlogBole, we believe in the power of information. We understand
+          that staying updated in today's fast-paced world can be a challenge,
+          which is why we strive to deliver comprehensive coverage on a variety
+          of subjects. From breaking news stories to in-depth analyses, we aim
+          to provide you with a holistic view of current events and trends.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
           Our platform is designed to cater to a diverse audience with varying
@@ -48,8 +47,8 @@ const About = () => {
           discussions and encourage critical thinking among our readers.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
-          At [Website Name], we understand that everyone's time is valuable.
-          That's why we strive to present information in a concise and easily
+          At BlogBole, we understand that everyone's time is valuable. That's
+          why we strive to present information in a concise and easily
           digestible manner. Our articles are crafted to deliver the essential
           details while maintaining clarity and readability. Whether you have a
           few minutes to spare or prefer an in-depth exploration of a topic, we
@@ -76,22 +75,22 @@ const About = () => {
           As technology continues to shape the world we live in, we recognize
           the need to adapt and embrace innovation. We are constantly evolving
           our platform to ensure that we provide you with a seamless and
-          immersive user experience. Whether you access [Website Name] through
-          your computer, smartphone, or tablet, we strive to deliver a visually
+          immersive user experience. Whether you access BlogBole through your
+          computer, smartphone, or tablet, we strive to deliver a visually
           appealing and user-friendly interface.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
-          Ultimately, our goal at [Website Name] is to be your trusted source
-          for news, insights, and engaging content. We are committed to
-          delivering information that empowers you to make informed decisions
-          and enriches your understanding of the world around you. We invite you
-          to join us on this journey of knowledge and exploration as we strive
-          to create a more informed and connected global community.
+          Ultimately, our goal at BlogBole is to be your trusted source for
+          news, insights, and engaging content. We are committed to delivering
+          information that empowers you to make informed decisions and enriches
+          your understanding of the world around you. We invite you to join us
+          on this journey of knowledge and exploration as we strive to create a
+          more informed and connected global community.
         </p>
         <p className="outfit tracking-wide text-[#333] text-[110%] ">
-          Thank you for visiting [Website Name]. We look forward to serving you
-          with the latest news, thought-provoking articles, and captivating
-          stories every day.
+          Thank you for visiting BlogBole. We look forward to serving you with
+          the latest news, thought-provoking articles, and captivating stories
+          every day.
         </p>
       </div>
     </section>
