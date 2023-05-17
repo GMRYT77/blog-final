@@ -18,11 +18,11 @@ const PostCard = (props) => {
         />
       </Link>
       <div className="flex flex-col p-3 gap-1 outfit">
-        <div className="text-[#333]/60 text-[80%] dark:text-[#f1f1f1]/70 font-bold">
+        <div className="text-[#333]/60 text-[80%] dark:text-[#f1f1f1]/70 font-medium">
           {props.date}
         </div>
         <Link href={`/${props.postUrl}`}>
-          <h1 className="text-[110%] text-[#111] dark:text-[#fff] font-medium tracking-wider mb-2 zilla">
+          <h1 className="text-[110%] text-[#111] dark:text-[#f3f3f3] dark:font-medium font-semibold tracking-wider mb-2 zilla">
             {props.title}
           </h1>
         </Link>
