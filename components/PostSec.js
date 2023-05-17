@@ -15,7 +15,7 @@ const PostSec = () => {
     } else {
       setCurrWindowHeight(() => 1);
     }
-  });
+  }, [currWindowHeight]);
 
   return (
     <section className="relative w-full ">

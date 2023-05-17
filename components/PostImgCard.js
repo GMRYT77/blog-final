@@ -31,7 +31,7 @@ const PostImgCard = (props) => {
     let newDate = month + " " + day + ", " + year;
 
     setD(newDate);
-  }, [d]);
+  }, [d, months]);
   return (
     <Suspense fallback={<Loading />}>
       <div className="w-full relative aspect-[10/9] xs:aspect-[10/7] md:aspect-square lg:aspect-[10/9] rounded-xl overflow-hidden group mb-2">

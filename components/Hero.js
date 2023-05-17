@@ -27,7 +27,7 @@ const Hero = () => {
     }
 
     return () => clearInterval(interval);
-  });
+  }, [s, posts.length]);
 
   const posts = [
     {
