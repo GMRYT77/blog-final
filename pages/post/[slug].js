@@ -24,16 +24,13 @@ const PostSlug = ({ post }) => {
     let m = d.slice(5, 7);
     let month = months[parseInt(m)];
     let year = d.slice(0, 4);
-
     let newDate = month + " " + day + ", " + year;
-
     setD(newDate);
-  }, []);
-  console.log(post);
-  useEffect(() => {
     const l = document.getElementById("POST_DIV");
     l.innerHTML = post.content.html;
-  }, []);
+  }, [d, post.slug]);
+  console.log(post);
+
   return (
     <section className="my-6">
       <div className="cont flex  sm:text-[.875rem] md:text-[1rem]">
