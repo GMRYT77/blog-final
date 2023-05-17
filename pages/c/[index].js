@@ -4,18 +4,19 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
 const index = () => {
-  const router = useRouter();
   const [path, setPath] = useState("/c/[index]");
+  const router = useRouter();
   useEffect(() => {
     while (router.asPath === "/c/[index]") {
       return;
     }
-    setPath(() => router.asPath);
-  });
+    setPath(() => router.query.index);
+    console.log(router.query.index);
+  }, [router.query]);
   return (
     <>
-      {path === "/c/about" ? <About /> : ""}
-      {path === "/c/privacy-policy" ? <PvC /> : ""}
+      {path === "about" ? <About /> : ""}
+      {path === "privacy-policy" ? <PvC /> : ""}
     </>
   );
 };
