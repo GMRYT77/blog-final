@@ -1,40 +1,46 @@
 import { getPostDetails, getPosts } from "@/backend";
+import SEO from "@/components/SEO";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const PostSlug = ({ post }) => {
   const [d, setD] = useState(post.date);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   useEffect(() => {
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
     let day = d.slice(8, 10);
     let m = d.slice(5, 7);
     let month = months[parseInt(m)];
     let year = d.slice(0, 4);
     let newDate = month + " " + day + ", " + year;
+    console.log(month, day, year);
     setD(newDate);
+  }, [post.slug]);
+  console.log(post);
+
+  useEffect(() => {
     const l = document.getElementById("POST_DIV");
     l.innerHTML = post.content.html;
-  }, [d, post.content.html]);
-  console.log(post);
+  }, [post.content.html]);
 
   return (
     <section className="my-6">
+      <SEO title={post.title} />
       <div className="cont flex  sm:text-[.875rem] md:text-[1rem]">
-        <div className="w-[70%] flex flex-col gap-6">
+        <div className="md:w-[70%] flex flex-col gap-6 w-full">
           <div className="flex flex-col gap-3 border-b-[1px] border-b-[#a1a1a1]/50 pb-6">
             <div className="flex text-[90%] outfit opacity-75 gap-3 items-end">
               <Link href="/">Home</Link>
@@ -68,7 +74,7 @@ const PostSlug = ({ post }) => {
           </div>
           <div className="flex flex-col gap-4" id="POST_DIV"></div>
         </div>
-        <div className="w-[30%]">ddd</div>
+        <div className="md:flex hidden w-[30%]">ddd</div>
       </div>
     </section>
   );
