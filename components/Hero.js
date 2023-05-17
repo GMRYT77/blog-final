@@ -5,30 +5,6 @@ import React, { useEffect, useState } from "react";
 const Hero = () => {
   const [currPost, setCurrPost] = useState(0);
   const [s, ss] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (s < posts.length - 1) {
-        ss((p) => p + 1);
-      } else {
-        ss(0);
-      }
-    }, 5000);
-
-    setCurrPost(s);
-
-    let dots = document.getElementsByClassName("dots");
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("click", (e) => {
-        e.preventDefault();
-        ss(i);
-        console.log("clicked" + i);
-      });
-    }
-
-    return () => clearInterval(interval);
-  }, [s, posts.length]);
-
   const posts = [
     {
       category: "Music0",
@@ -55,6 +31,28 @@ const Hero = () => {
       img_url: "img3.jpg",
     },
   ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (s < posts.length - 1) {
+        ss((p) => p + 1);
+      } else {
+        ss(0);
+      }
+    }, 5000);
+
+    setCurrPost(s);
+
+    let dots = document.getElementsByClassName("dots");
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].addEventListener("click", (e) => {
+        e.preventDefault();
+        ss(i);
+        console.log("clicked" + i);
+      });
+    }
+
+    return () => clearInterval(interval);
+  }, [s, posts.length]);
 
   let arr = [];
   for (let i = 0; i < posts.length; i++) {

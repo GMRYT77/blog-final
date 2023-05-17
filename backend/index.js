@@ -6,18 +6,26 @@ export const getPosts = async () => {
   const query = gql`
     query Assets {
       posts {
+        category {
+          ... on Category {
+            category
+            slug
+          }
+        }
+        slug
+        tags
         title
         authors {
-          slug
           name
-          id
+          picture {
+            url
+          }
+          slug
         }
         coverImage {
           url
         }
-        slug
-        tags
-        publishedAt
+        date
       }
     }
   `;
