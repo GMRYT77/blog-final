@@ -5,32 +5,6 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const PostSlug = ({ post }) => {
-  const [d, setD] = useState(post.date);
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  useEffect(() => {
-    let day = d.slice(8, 10);
-    let m = d.slice(5, 7);
-    let month = months[parseInt(m)];
-    let year = d.slice(0, 4);
-    let newDate = month + " " + day + ", " + year;
-    console.log(month, day, year);
-    setD(newDate);
-  }, [post.slug]);
-  console.log(post);
-
   useEffect(() => {
     const l = document.getElementById("POST_DIV");
     l.innerHTML = post.content.html;
@@ -53,7 +27,7 @@ const PostSlug = ({ post }) => {
               {post.title}
             </h1>
             <div className="flex w-full  justify-between">
-              <span className="outfit text-[105%] opacity-90">{d}</span>
+              <span className="outfit text-[105%] opacity-90">{post.date}</span>
               <div className="flex gap-3">
                 <div className="relative w-[30px] h-[30px] rounded-full overflow-hidden">
                   <Image
