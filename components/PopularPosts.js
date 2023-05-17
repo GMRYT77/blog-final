@@ -10,8 +10,10 @@ const Loading = () => {
   return <div className="">loading ... </div>;
 };
 
-const PopularPosts = () => {
+const PopularPosts = (props) => {
   const a = [1, 2, 3, 4];
+  const posts = props.posts;
+  console.log(posts[0]);
   return (
     <section className="w-full ">
       <div className="cont flex flex-col gap-12 text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
@@ -37,12 +39,26 @@ const PopularPosts = () => {
             Popular Posts
           </h2>
           <div className="w-full grid md:grid-cols-2  gap-6 sm:gap-8 md:gap-14 relative ">
-            {a.map((e, i) => {
-              return (
-                <Suspense key={i} fallback={<Loading />}>
-                  <PostImgCard />
-                </Suspense>
-              );
+            {posts.map((e, i) => {
+              if (i < 8) {
+                return (
+                  <Suspense key={i} fallback={<Loading />}>
+                    <PostImgCard
+                      coverImage={e.coverImage.url}
+                      category={e.category.category}
+                      catgSlug={e.category.slug}
+                      author={e.authors[0].name}
+                      autSlug={e.authors[0].slug}
+                      autImg={e.authors[0].picture.url}
+                      slug={e.slug}
+                      title={e.title}
+                      date={e.date}
+                    />
+                  </Suspense>
+                );
+              } else {
+                return;
+              }
             })}
           </div>
         </div>

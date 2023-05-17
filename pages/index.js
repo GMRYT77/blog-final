@@ -5,14 +5,17 @@ import PopularPosts from "@/components/PopularPosts";
 import PostSec from "@/components/PostSec";
 import Quote from "@/components/Quote";
 import SEO from "@/components/SEO";
-import data from "./api/data.json";
 
-export default function Home() {
+import { getPosts } from "@/backend/index.js";
+
+export default function Home({ posts }) {
+  console.log(posts);
+
   return (
     <section className="w-[100vw] h-full flex flex-col gap-14">
       <SEO title="Home Page" />
       <Hero />
-      <PopularPosts />
+      <PopularPosts posts={posts} />
       <Quote />
       <LatestPost />
       <PostSec />
@@ -20,3 +23,17 @@ export default function Home() {
     </section>
   );
 }
+
+export async function getStaticProps() {
+  const response = await fetch("http://localhost:3000/api/data");
+  const data = await response.json();
+  return {
+    props: { posts: data },
+  };
+}
+// export async function getStaticProps() {
+//   const posts = (await getPosts()) || [];
+//   return {
+//     props: { posts },
+//   };
+// }
