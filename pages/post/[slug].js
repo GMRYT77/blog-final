@@ -163,7 +163,10 @@ const PostSlug = ({ post }) => {
             <div className="flex flex-wrap gap-4">
               {post.tags.map((e, i) => {
                 return (
-                  <div className="px-3 rounded py-1 text-[120%] sarabun opacity-75 border-[1px] border-neutral-400/80">
+                  <div
+                    key={i}
+                    className="px-3 rounded py-1 text-[120%] sarabun opacity-75 border-[1px] border-neutral-400/80"
+                  >
                     {e}
                   </div>
                 );
