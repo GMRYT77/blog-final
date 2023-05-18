@@ -9,7 +9,7 @@ const Loading = () => {
 };
 
 const LatestPost = () => {
-  const a = [1, 2, 3, 4, 5, 6, 7, 8];
+  const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
     <section className="w-full text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
       <div className="cont flex flex-col gap-12">

@@ -7,32 +7,21 @@ const Loading = () => {
 };
 
 const PostImgCard = (props) => {
-  const [d, setD] = useState(props.date);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-  useEffect(() => {
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    let day = d.slice(8, 10);
-    let m = d.slice(5, 7);
-    let month = months[parseInt(m)];
-    let year = d.slice(0, 4);
-
-    let newDate = month + " " + day + ", " + year;
-
-    setD(newDate);
-  }, [d]);
   return (
     <Suspense fallback={<Loading />}>
       <div className="w-full relative aspect-[10/9] xs:aspect-[10/7] md:aspect-square lg:aspect-[10/9] rounded-xl overflow-hidden group mb-2">
@@ -72,7 +61,12 @@ const PostImgCard = (props) => {
               {props.author}
             </Link>
             <span className="w-[6px] h-[6px] rounded-full  bg-white/70"></span>
-            <span>{d}</span>
+            <span>
+              {months[parseInt(props.date.slice(5, 7)) - 1]}{" "}
+              {props.date.slice(8, 10)}
+              {", "}
+              {props.date.slice(0, 4)}
+            </span>
           </div>
         </div>
       </div>
