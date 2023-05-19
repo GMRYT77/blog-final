@@ -72,3 +72,23 @@ export const getPostDetails = async (slug) => {
   const result = await request(graphqlAPI, query, { slug });
   return result.post;
 };
+export const getRelatedPosts = async (tag) => {
+  const query = gql`
+    query GetRelatedPosts($tag: [String!]) {
+      posts(where: { tags_contains_some: $tag }) {
+        authors {
+          name
+          picture {
+            url
+          }
+          slug
+        }
+        date
+        title
+        slug
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { tag });
+  return result.posts;
+};

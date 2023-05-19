@@ -12,8 +12,6 @@ const PopularPosts = dynamic(() => import("@/components/PopularPosts"), {
 import { getPosts } from "@/backend/index.js";
 
 export default function Home({ posts }) {
-  console.log(posts);
-
   return (
     <section className="w-[100vw] h-full flex flex-col gap-14">
       <SEO title="Home Page" />

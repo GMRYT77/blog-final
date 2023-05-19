@@ -1,10 +1,10 @@
-import { getPostDetails, getPosts } from "@/backend";
+import { getPostDetails, getPosts, getRelatedPosts } from "@/backend";
 import SEO from "@/components/SEO";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
-const PostSlug = ({ post }) => {
+const PostSlug = ({ post, relPost }) => {
   const months = [
     "January",
     "February",
@@ -20,6 +20,9 @@ const PostSlug = ({ post }) => {
     "December",
   ];
 
+  const [tableOfContents, setTableOfContents] = useState([]);
+  const [h, setH] = useState(0);
+
   useEffect(() => {
     let CopySVG = `<svg width="24" height="24" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.724854 4.20859C0.724854 3.30936 1.08207 2.44696 1.71792 1.81111C2.35378 1.17525 3.21618 0.818035 4.11541 0.818035H21.0682C21.9674 0.818035 22.8298 1.17525 23.4657 1.81111C24.1015 2.44696 24.4587 3.30936 24.4587 4.20859V10.9897H31.2398C32.1391 10.9897 33.0015 11.3469 33.6373 11.9828C34.2732 12.6186 34.6304 13.481 34.6304 14.3802V31.333C34.6304 32.2322 34.2732 33.0946 33.6373 33.7305C33.0015 34.3663 32.1391 34.7236 31.2398 34.7236H14.2871C13.3878 34.7236 12.5254 34.3663 11.8896 33.7305C11.2537 33.0946 10.8965 32.2322 10.8965 31.333V24.5519H4.11541C3.21618 24.5519 2.35378 24.1947 1.71792 23.5588C1.08207 22.923 0.724854 22.0606 0.724854 21.1614V4.20859ZM14.2871 24.5519V31.333H31.2398V14.3802H24.4587V21.1614C24.4587 22.0606 24.1015 22.923 23.4657 23.5588C22.8298 24.1947 21.9674 24.5519 21.0682 24.5519H14.2871ZM21.0682 21.1614V4.20859H4.11541V21.1614H21.0682Z" fill="white"/>
@@ -31,6 +34,7 @@ const PostSlug = ({ post }) => {
 
     const l = document.getElementById("POST_DIV");
     l.innerHTML = post.content.html;
+    const con = post.content.html;
     l.childNodes.forEach((e, i) => {
       if (e.nodeName === "P") {
         e.classList.add("text-[120%]", "outfit", "font-light");
@@ -51,7 +55,7 @@ const PostSlug = ({ post }) => {
           "pt-4",
           "pb-4",
           "text-[#f4f4f4]",
-          "overflow-x-scroll"
+          "overflow-x-auto"
         );
         const div = document.createElement("div");
         div.classList.add(
@@ -104,6 +108,21 @@ const PostSlug = ({ post }) => {
         e.appendChild(div);
       } else if (e.nodeName === "A") {
         e.classList.add("text-blue-600", "hover:underline");
+      } else if (e.nodeName === "H1") {
+        e.classList.add(
+          "outfit",
+          "font-semibold",
+          "tracking-wide",
+          "text-[180%]",
+          "pt-[90px]",
+          "pb-4",
+          `${i}`
+        );
+        setTableOfContents((a) => [
+          ...a,
+          { heading: e.innerText, link: `#h-${i}` },
+        ]);
+        e.setAttribute("id", `h-${i}`);
       }
     });
   }, [post.content.html]);
@@ -198,18 +217,41 @@ const PostSlug = ({ post }) => {
             <h4 className="outfit text-[150%] ">Comments</h4>
           </div>
         </div>
-        <div className="md:flex hidden w-[30%]">ddd</div>
+        <div className="md:flex hidden w-[30%] relative px-3 ">
+          <div className="flex flex-col gap-6 sticky top-[90px] w-full  h-fit">
+            <div className="flex flex-col gap-3">
+              <h5 className="sarabun text-[130%] font-semibold tracking-wider">
+                Table of Contents
+              </h5>
+              <ol className="flex flex-col gap-1 pl-6 list-disc">
+                {tableOfContents.map((e, i) => {
+                  if (i < post.content.html.match(/<h1>/g).length) {
+                    return (
+                      // scroll={false}
+                      <Link key={i} href={e.link}>
+                        <li className="outfit text-blue-700 text-[110%] hover:underline hover:underline-offset-2">
+                          {" "}
+                          {e.heading}
+                        </li>
+                      </Link>
+                    );
+                  }
+                })}
+              </ol>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
-
 export default PostSlug;
 
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
+  const relPosts = await getRelatedPosts(data.tags);
   return {
-    props: { post: data },
+    props: { post: data, relPost: relPosts },
   };
 }
 
