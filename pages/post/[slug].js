@@ -125,6 +125,7 @@ const PostSlug = ({ post, relPost }) => {
         e.setAttribute("id", `h-${i}`);
       }
     });
+    console.log(post.content.html.match(/<h1>/g));
   }, [post.content.html]);
 
   return (
@@ -220,9 +221,13 @@ const PostSlug = ({ post, relPost }) => {
         <div className="md:flex hidden w-[30%] relative px-3 ">
           <div className="flex flex-col gap-6 sticky top-[90px] w-full  h-fit">
             <div className="flex flex-col gap-3">
-              <h5 className="sarabun text-[130%] font-semibold tracking-wider">
-                Table of Contents
-              </h5>
+              {post.content.html.match(/<h1>/g) != null ? (
+                <h5 className="sarabun text-[130%] font-semibold tracking-wider">
+                  Table of Contents
+                </h5>
+              ) : (
+                <span>llo</span>
+              )}
               <ol className="flex flex-col gap-1 pl-6 list-disc">
                 {tableOfContents.map((e, i) => {
                   if (i < post.content.html.match(/<h1>/g).length) {
@@ -230,7 +235,6 @@ const PostSlug = ({ post, relPost }) => {
                       // scroll={false}
                       <Link key={i} href={e.link}>
                         <li className="outfit text-blue-700 text-[110%] hover:underline hover:underline-offset-2">
-                          {" "}
                           {e.heading}
                         </li>
                       </Link>

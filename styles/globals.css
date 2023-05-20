@@ -171,6 +171,16 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  .thin-scrolly::-webkit-scrollbar {
+    width: 4px;
+  }
+  .thin-scrolly::-webkit-scrollbar-track {
+    background: #f8f8f8;
+  }
+  .thin-scrolly::-webkit-scrollbar-thumb {
+    background: #909090;
+  }
+
   .bl {
     position: relative;
     width: 100%;

@@ -77,8 +77,8 @@ const PvC = () => {
         <ol>
           <li>
             Service Providers: We may engage trusted third-party companies and
-            individuals to facilitate our website's operations and services on
-            our behalf. These third parties may have access to your personal
+            individuals to facilitate our website&apos;s operations and services
+            on our behalf. These third parties may have access to your personal
             information only to perform specific tasks and are obligated not to
             disclose or use it for any other purpose.
           </li>

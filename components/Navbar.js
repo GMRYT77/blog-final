@@ -36,9 +36,18 @@ const Navbar = () => {
       localStorage.setItem("isDM", !isDm);
     }
   };
+
+  const showSearchBar = () => {
+    const search = document.getElementById("SEARCH_BAR");
+    const body = document.getElementById("BODY");
+    const l = document.getElementById("loge");
+    search.classList.toggle("hidden");
+    l.classList.toggle("hidden");
+    body.classList.toggle("overflow-y-hidden");
+  };
   return (
     <nav className="sticky top-0 md:top-[-60px] z-[999]">
-      <section className="relative bg-t w-full text-white pt-2 pb-2 md:pb-3 flex flex-col gap-3  border-b-[1px] border-[#a1a1a1]/30 shadow-lg">
+      <section className="relative bg-t w-full text-white pt-2 pb-2 md:pb-3 flex flex-col gap-3 z-20 border-b-[1px] border-[#a1a1a1]/30 shadow-lg">
         <div className="cont flex">
           <div className="relative justify-between flex items-start w-[60px]">
             <div className="sticky top-[22px]  pt-2 pb-1  text-2xl text-white/70 pl-3 ">
@@ -111,7 +120,10 @@ const Navbar = () => {
           <div className="relative  justify-end flex  w-[60px]">
             <div className="sticky top-[22px] pt-2 pb-1  h-fit w-fit flex outfit text-white/70 gap-4">
               <div className="flex items-center gap-3 hover:text-white">
-                <BsSearch className="text-lg cursor-pointer " />
+                <BsSearch
+                  onClick={showSearchBar}
+                  className="text-lg cursor-pointer "
+                />
               </div>
               {isDm === false ? (
                 <MdDarkMode
