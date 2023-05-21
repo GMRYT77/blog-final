@@ -20,7 +20,7 @@ const PostCard = (props) => {
   return (
     <div className="flex-1 bg-white dark:bg-[#1a1a1a]  drop-shadow-md rounded flex flex-col min-w-[280px] max-w-[450px] mx-auto hover:drop-shadow-xl text-[1rem]">
       <Link
-        href={`/${props.postUrl}`}
+        href={`/post/${props.slug}`}
         className="w-full relative aspect-[10/5] lg:aspect-[10/8] overflow-hidden"
       >
         <Image
@@ -58,7 +58,7 @@ const PostCard = (props) => {
         </p>
         <div className="flex gap-4 items-center text-sm mt-1">
           <Link
-            href={`/${props.autSlug}`}
+            href={`/author/${props.autSlug}`}
             className="text-[#111111]/80 dark:text-[#f1f1f1]/80 hover:text-[#111] flex gap-2 items-center mukta text-[120%]"
           >
             <div className="relative w-[24px] h-[24px] rounded-full overflow-hidden ">
