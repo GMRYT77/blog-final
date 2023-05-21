@@ -1,17 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { TbNorthStar } from "react-icons/tb";
 import PostCard from "./PostCard";
+import { getRecentPosts } from "@/backend";
 
 const Loading = () => {
   return <div className="">loading ... </div>;
 };
 
-const LatestPost = (props) => {
-  const posts = props.posts;
-  console.log(posts);
-  const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const LatestPost = () => {
+  const [lp, setLp] = useState([]);
+
+  useEffect(() => {
+    getRecentPosts().then((a) => setLp(a));
+  }, []);
+
   return (
     <section className="w-full text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
       <div className="cont flex flex-col gap-12">
@@ -21,10 +25,21 @@ const LatestPost = (props) => {
             Latest Post
           </h2>
           <div className="w-full flex gap-8 relative flex-wrap justify-between pl-2 pr-4">
-            {a.map((e, i) => {
+            {lp.map((e, i) => {
               return (
                 <Suspense key={i} fallback={<Loading />}>
-                  <PostCard />
+                  <PostCard
+                    key={i}
+                    coverImage={e.node.coverImage.url}
+                    category={e.node.category.category}
+                    catgSlug={e.node.category.slug}
+                    author={e.node.authors[0].name}
+                    autSlug={e.node.authors[0].slug}
+                    autImg={e.node.authors[0].picture.url}
+                    slug={e.node.slug}
+                    title={e.node.title}
+                    date={e.node.date}
+                  />
                 </Suspense>
               );
             })}

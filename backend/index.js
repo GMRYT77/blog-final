@@ -132,7 +132,11 @@ export const getFeaturedPosts = async () => {
 export const getRecentPosts = async () => {
   const query = gql`
     query GetLatestPost {
-      postsConnection(last: 12, orderBy: publishedAt_DESC) {
+      postsConnection(
+        last: 12
+        orderBy: publishedAt_DESC
+        where: { featuredPost: false }
+      ) {
         edges {
           node {
             authors {
