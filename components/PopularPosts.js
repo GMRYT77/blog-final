@@ -1,10 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState, useEffect, Suspense } from "react";
 import { TbNorthStar } from "react-icons/tb";
-import PostCard from "./PostCard";
 import PostImgCard from "./PostImgCard";
-import posts from "@/backend/posts";
 import { getFeaturedPosts } from "@/backend";
 
 const Loading = () => {
@@ -16,6 +12,7 @@ const PopularPosts = () => {
 
   useEffect(() => {
     getFeaturedPosts().then((a) => setFp(a));
+    console.log(fp);
   }, []);
 
   return (
@@ -48,14 +45,14 @@ const PopularPosts = () => {
                 <Suspense key={i} fallback={<Loading />}>
                   <PostImgCard
                     coverImage={e.coverImage.url}
-                    category={e.category.category}
+                    catg={e.category.category}
                     catgSlug={e.category.slug}
                     author={e.authors[0].name}
                     autSlug={e.authors[0].slug}
-                    autImg={e.authors[0].picture.url}
                     slug={e.slug}
                     title={e.title}
                     date={e.date}
+                    autImg={e.authors[0].picture.url}
                   />
                 </Suspense>
               );

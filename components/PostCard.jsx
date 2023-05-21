@@ -43,7 +43,7 @@ const PostCard = (props) => {
             className="text-[#333]/90 dark:text-[#f1f1f1]/90"
             href={`/category/${props.catgSlug}`}
           >
-            #{props.category}
+            #{props.catg}
           </Link>
         </div>
         <Link href={`/${props.slug}`}>
@@ -87,5 +87,5 @@ PostCard.defaultProps = {
   author: "Steve Jobs",
   slug: "defaultPostUrl",
   autSlug: "defaultAuthorUrl",
-  category: "catg",
+  catg: "catg",
 };

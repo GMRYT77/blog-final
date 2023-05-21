@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect, useState } from "react";
 
 const PostImgCard = (props) => {
-  const [loading, setloading] = useState(false);
   const months = [
     "January",
     "February",
@@ -18,13 +17,8 @@ const PostImgCard = (props) => {
     "November",
     "December",
   ];
-  useEffect(() => {
-    setTimeout(() => {
-      setloading(true);
-    }, 2000);
-  }, []);
 
-  return loading ? (
+  return (
     <div className="w-full relative aspect-[10/9] xs:aspect-[10/7] md:aspect-square lg:aspect-[10/9] rounded-xl overflow-hidden group mb-2">
       <Image
         src={`${props.coverImage}`}
@@ -71,8 +65,6 @@ const PostImgCard = (props) => {
         </div>
       </div>
     </div>
-  ) : (
-    <Loading />
   );
 };
 

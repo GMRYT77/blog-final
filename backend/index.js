@@ -102,7 +102,7 @@ export const getRelatedPosts = async (tag) => {
 export const getFeaturedPosts = async () => {
   const query = gql`
     query GetFeaturedPost {
-      posts(where: { featuredPost: true }, last: 6) {
+      posts(where: { featuredPost: true }, last: 6, orderBy: publishedAt_DESC) {
         authors {
           name
           picture {
