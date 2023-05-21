@@ -32,11 +32,19 @@ const PostCard = (props) => {
         />
       </Link>
       <div className="flex flex-col p-3 gap-1 outfit">
-        <div className="text-[#333]/60 text-[90%] dark:text-[#f1f1f1]/70 font-medium">
-          {months[parseInt(props.date.slice(5, 7)) - 1]}{" "}
-          {props.date.slice(8, 10)}
-          {", "}
-          {props.date.slice(0, 4)}
+        <div className=" text-[90%] flex justify-between font-medium">
+          <span className="text-[#333]/60 dark:text-[#f1f1f1]/70">
+            {months[parseInt(props.date.slice(5, 7)) - 1]}{" "}
+            {props.date.slice(8, 10)}
+            {", "}
+            {props.date.slice(0, 4)}
+          </span>
+          <Link
+            className="text-[#333]/90 dark:text-[#f1f1f1]/90"
+            href={`/category/${props.catgSlug}`}
+          >
+            #{props.category}
+          </Link>
         </div>
         <Link href={`/${props.slug}`}>
           <h1 className="text-[125%] text-[#111] dark:text-[#f3f3f3]  font-semibold tracking-wider mb-2 zilla">

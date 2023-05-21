@@ -44,25 +44,12 @@ const LatestPost = () => {
               );
             })}
           </div>
-          <div className="flex w-full justify-center mt-4 py-2 gap-2 items-center text-white">
-            <button className="relative px-3 pt-2 pb-[.25rem] rounded-bl-md rounded-tr-md bg-neutral-700 text-white sora mr-2">
-              Previous
-            </button>
-
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700 hover:bg-neutral-700 rounded">
-              1
-            </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              2
-            </button>
-            <button className="sora text-lg h-[32px] aspect-square relative bg-neutral-700/60 hover:bg-neutral-700 rounded">
-              3
-            </button>
-
-            <button className="relative px-3 pt-2 pb-[.25rem] rounded-bl-md rounded-tr-md bg-neutral-700 text-white sora ml-2">
-              Next
-            </button>
-          </div>
+          <Link
+            href="/post"
+            className="text-[120%] px-16 my-8 py-2 rounded-md bg-blue-500 border-[.6px] border-[#a1a1a1]/80 w-fit mx-auto sarabun tracking-wider font-semibold text-white"
+          >
+            View All
+          </Link>
         </div>
       </div>
     </section>
