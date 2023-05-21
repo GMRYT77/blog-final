@@ -103,7 +103,7 @@ const Footer = () => {
             <Link href="/" className="hover:text-white">
               Terms & Conditions
             </Link>
-            <Link href="/" className="hover:text-white">
+            <Link href="#" className="hover:text-white">
               Cookies
             </Link>
             <Link href="/c/about" className="hover:text-white">

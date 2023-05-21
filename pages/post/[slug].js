@@ -233,7 +233,7 @@ const PostSlug = ({ post, relPost }) => {
                   if (i < post.content.html.match(/<h1>/g).length) {
                     return (
                       // scroll={false}
-                      <Link key={i} href={e.link}>
+                      <Link key={i} srcoll={90} href={e.link}>
                         <li className="outfit text-blue-700 text-[110%] hover:underline hover:underline-offset-2">
                           {e.heading}
                         </li>
