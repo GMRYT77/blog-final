@@ -7,6 +7,10 @@ import PostImgCard from "./PostImgCard";
 import posts from "@/backend/posts";
 import { getFeaturedPosts } from "@/backend";
 
+const Loading = () => {
+  return <span>loading ....</span>;
+};
+
 const PopularPosts = () => {
   const [fp, setFp] = useState([]);
 
@@ -41,18 +45,20 @@ const PopularPosts = () => {
           <div className="w-full grid md:grid-cols-2  gap-6 sm:gap-8 md:gap-14 relative ">
             {fp.map((e, i) => {
               return (
-                <PostImgCard
-                  key={i}
-                  coverImage={e.coverImage.url}
-                  category={e.category.category}
-                  catgSlug={e.category.slug}
-                  author={e.authors[0].name}
-                  autSlug={e.authors[0].slug}
-                  autImg={e.authors[0].picture.url}
-                  slug={e.slug}
-                  title={e.title}
-                  date={e.date}
-                />
+                <Suspense fallback={<Loading />}>
+                  <PostImgCard
+                    key={i}
+                    coverImage={e.coverImage.url}
+                    category={e.category.category}
+                    catgSlug={e.category.slug}
+                    author={e.authors[0].name}
+                    autSlug={e.authors[0].slug}
+                    autImg={e.authors[0].picture.url}
+                    slug={e.slug}
+                    title={e.title}
+                    date={e.date}
+                  />
+                </Suspense>
               );
             })}
           </div>

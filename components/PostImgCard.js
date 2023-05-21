@@ -36,9 +36,9 @@ const PostImgCard = (props) => {
         <div className="absolute bottom-0 w-full z-30 text-white px-7 pb-4  flex flex-col">
           <Link
             href={`/category/${props.catgSlug}`}
-            className="outfit px-2 py-1 bg-blue-400/70 w-fit rounded-md mb-3 text-[75%]"
+            className="outfit w-fit  mb-2 text-[95%] hover:underline hover:underline-offset-2"
           >
-            {props.category}
+            #{props.category}
           </Link>
           <Link href={`/post/${props.slug}`} className="mb-4">
             <h1 className="sora font-semibold text-[160%] xs:text-[180%] sm:text-[200%] md:text-[160%] lg:text-[220%] lg:leading-[52px]">

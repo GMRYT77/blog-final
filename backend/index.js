@@ -114,6 +114,7 @@ export const getFeaturedPosts = async () => {
           ... on Category {
             id
             slug
+            category
           }
         }
         coverImage {
