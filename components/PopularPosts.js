@@ -1,14 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { TbNorthStar } from "react-icons/tb";
 import PostCard from "./PostCard";
 import PostImgCard from "./PostImgCard";
 import posts from "@/backend/posts";
+import { getFeaturedPosts } from "@/backend";
 
-const PopularPosts = (props) => {
-  const posts = props.posts;
-  console.log(posts[0].node);
+const PopularPosts = () => {
+  const [fp, setFp] = useState([]);
+
+  useEffect(() => {
+    getFeaturedPosts().then((a) => setFp(a));
+  }, []);
+
   return (
     <section className="w-full ">
       <div className="cont flex flex-col gap-12 text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
@@ -31,28 +36,24 @@ const PopularPosts = (props) => {
         <div className="flex flex-col gap-6 px-2 sm:px-4 md:px-0">
           <h2 className="mukta text-[190%] font-semibold tracking-wide dark:text-[#f1f1f1] text-[#333] gap-4 flex items-center">
             <TbNorthStar className="text-yellow-600" />
-            Popular Posts
+            Featured Posts
           </h2>
           <div className="w-full grid md:grid-cols-2  gap-6 sm:gap-8 md:gap-14 relative ">
-            {posts.map((e, i) => {
-              if (i < 8) {
-                return (
-                  <PostImgCard
-                    key={i}
-                    coverImage={e.node.coverImage.url}
-                    category={e.node.category.category}
-                    catgSlug={e.node.category.slug}
-                    author={e.node.authors[0].name}
-                    autSlug={e.node.authors[0].slug}
-                    autImg={e.node.authors[0].picture.url}
-                    slug={e.node.slug}
-                    title={e.node.title}
-                    date={e.node.date}
-                  />
-                );
-              } else {
-                return;
-              }
+            {fp.map((e, i) => {
+              return (
+                <PostImgCard
+                  key={i}
+                  coverImage={e.coverImage.url}
+                  category={e.category.category}
+                  catgSlug={e.category.slug}
+                  author={e.authors[0].name}
+                  autSlug={e.authors[0].slug}
+                  autImg={e.authors[0].picture.url}
+                  slug={e.slug}
+                  title={e.title}
+                  date={e.date}
+                />
+              );
             })}
           </div>
         </div>

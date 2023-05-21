@@ -1,9 +1,10 @@
 import { request, gql } from "graphql-request";
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+
 export const getPosts = async () => {
   const query = gql`
-    query MyQuery {
-      postsConnection {
+    query Assets {
+      postsConnection(last: 10) {
         edges {
           node {
             authors {
@@ -96,4 +97,72 @@ export const getRelatedPosts = async (tag) => {
   `;
   const result = await request(graphqlAPI, query, { tag });
   return result.posts;
+};
+
+export const getFeaturedPosts = async () => {
+  const query = gql`
+    query GetFeaturedPost {
+      posts(where: { featuredPost: true }, last: 6) {
+        authors {
+          name
+          picture {
+            url
+          }
+          slug
+        }
+        category {
+          ... on Category {
+            id
+            slug
+          }
+        }
+        coverImage {
+          url
+        }
+        createdAt
+        date
+        slug
+        title
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.posts;
+};
+export const getRecentPosts = async () => {
+  const query = gql`
+    query GetLatestPost {
+      postsConnection(last: 12, orderBy: publishedAt_DESC) {
+        edges {
+          node {
+            authors {
+              name
+              slug
+              picture {
+                url
+              }
+            }
+            category {
+              ... on Category {
+                id
+                category
+                slug
+              }
+            }
+            date
+            createdAt
+            excerpt
+            slug
+            tags
+            title
+            coverImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.postsConnection.edges;
 };

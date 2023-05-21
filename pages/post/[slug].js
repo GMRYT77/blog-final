@@ -125,7 +125,6 @@ const PostSlug = ({ post, relPost }) => {
         e.setAttribute("id", `h-${i}`);
       }
     });
-    console.log(post.content.html.match(/<h1>/g));
   }, [post.content.html]);
 
   return (

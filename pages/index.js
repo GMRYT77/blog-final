@@ -18,7 +18,7 @@ export default function Home({ posts }) {
       <Hero />
       <PopularPosts posts={posts} />
       <Quote />
-      <LatestPost />
+      <LatestPost posts={posts} />
       <PostSec />
       <Authors />
     </section>
