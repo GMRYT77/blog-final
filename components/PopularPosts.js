@@ -45,9 +45,8 @@ const PopularPosts = () => {
           <div className="w-full grid md:grid-cols-2  gap-6 sm:gap-8 md:gap-14 relative ">
             {fp.map((e, i) => {
               return (
-                <Suspense fallback={<Loading />}>
+                <Suspense key={i} fallback={<Loading />}>
                   <PostImgCard
-                    key={i}
                     coverImage={e.coverImage.url}
                     category={e.category.category}
                     catgSlug={e.category.slug}
