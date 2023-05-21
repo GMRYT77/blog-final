@@ -1,39 +1,35 @@
+import { getCoroselPosts } from "@/backend";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [coroselPost, setCoroselPost] = useState([]);
+
+  useEffect(() => {
+    getCoroselPosts().then((a) => setCoroselPost(a));
+    console.log(coroselPost);
+  }, []);
+
   const [currPost, setCurrPost] = useState(0);
   const [s, ss] = useState(0);
-  const posts = [
-    {
-      category: "Music0",
-      heading:
-        "0 Lorem, ipsum dolor sit amet consectetur adipisicing elit.Excepturi commodi ipsum",
-      author_name: "Steve Jobs",
-      pub_date: "December 19, 2023",
-      img_url: "img1.jpg",
-    },
-    {
-      category: "Music1",
-      heading:
-        "1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.Excepturi commodi ipsum",
-      author_name: "Steve Jobs",
-      pub_date: "December 19, 2023",
-      img_url: "img2.jpg",
-    },
-    {
-      category: "Music2",
-      heading:
-        "2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.Excepturi commodi ipsum",
-      author_name: "Steve Jobs",
-      pub_date: "December 19, 2023",
-      img_url: "img3.jpg",
-    },
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   useEffect(() => {
     const interval = setInterval(() => {
-      if (s < posts.length - 1) {
+      if (s < coroselPost.length - 1) {
         ss((p) => p + 1);
       } else {
         ss(0);
@@ -52,10 +48,10 @@ const Hero = () => {
     }
 
     return () => clearInterval(interval);
-  }, [s, posts.length]);
+  }, [s, coroselPost.length]);
 
   let arr = [];
-  for (let i = 0; i < posts.length; i++) {
+  for (let i = 0; i < coroselPost.length; i++) {
     arr.push(i);
   }
 
@@ -65,7 +61,7 @@ const Hero = () => {
         <div className="md:w-2/3 w-full flex px-2 sm:px-4 md:px-0 ">
           <div className="relative w-[94%] aspect-[12/9] sm:aspect-[12/8] overflow-hidden group">
             <Image
-              src={`/${posts[currPost].img_url}`}
+              src={`${coroselPost[currPost].coverImage.url}`}
               layout="fill"
               objectFit="cover"
               alt=""
@@ -73,26 +69,39 @@ const Hero = () => {
             />
             <div className="absolute z-[30] w-full bottom-0 flex flex-col gap-1 md:gap-3 px-5 py-3">
               <Link
-                href="/"
+                href={`/category/${coroselPost[currPost].category.slug}`}
                 className="outfit tracking-wide text-[.675rem] sm:text-xs md:text-sm px-[.35rem] py-[.1rem] md:px-2 md:pt-1 pb-[.15rem] rounded-md bg-blue-400/70 w-fit md:mb-2"
               >
-                {posts[currPost].category}
+                {coroselPost[currPost].category.category}
               </Link>
               <Link
-                href="/"
+                href={`/post/${coroselPost[currPost].slug}`}
                 className="lg:text-4xl text-sm xs:text-xl md:text-2xl tracking-wider sora mb-3"
               >
-                {posts[currPost].heading}
+                {coroselPost[currPost].title}
               </Link>
               <div className="flex gap-4 items-center text-white/70 text-[.65rem] xs:text-xs sm:text-xs md:text-sm">
                 <div className="relative w-[18px] h-[18px] xs:w-[24px] xs:h-[24px] md:w-[32px] md:h-[32px] rounded-full overflow-hidden ">
-                  <Image src="/p1.png" layout="fill" objectFit="cover" alt="" />
+                  <Image
+                    src={`${coroselPost[currPost].authors[0].picture.url}`}
+                    layout="fill"
+                    objectFit="cover"
+                    alt=""
+                  />
                 </div>
-                <Link href="/" className="hover:text-white ">
-                  {posts[currPost].author_name}
+                <Link
+                  href={`/author/${coroselPost[currPost].authors[0].slug}`}
+                  className="hover:text-white "
+                >
+                  {coroselPost[currPost].authors[0].name}
                 </Link>
                 <span className="w-[6px] h-[6px] rounded-full  bg-white/70"></span>
-                <span>{posts[currPost].pub_date}</span>
+                <span>
+                  {months[parseInt(coroselPost[currPost].date.slice(5, 7)) - 1]}{" "}
+                  {coroselPost[currPost].date.slice(8, 10)}
+                  {", "}
+                  {coroselPost[currPost].date.slice(0, 4)}
+                </span>
               </div>
             </div>
           </div>

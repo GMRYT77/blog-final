@@ -98,7 +98,6 @@ export const getRelatedPosts = async (tag) => {
   const result = await request(graphqlAPI, query, { tag });
   return result.posts;
 };
-
 export const getFeaturedPosts = async () => {
   const query = gql`
     query GetFeaturedPost {
@@ -134,9 +133,10 @@ export const getRecentPosts = async () => {
   const query = gql`
     query GetLatestPost {
       postsConnection(
-        last: 12
+        last: 16
         orderBy: publishedAt_DESC
         where: { featuredPost: false }
+        skip: 4
       ) {
         edges {
           node {
@@ -170,4 +170,38 @@ export const getRecentPosts = async () => {
   `;
   const result = await request(graphqlAPI, query);
   return result.postsConnection.edges;
+};
+export const getCoroselPosts = async () => {
+  const query = gql`
+    query GetCoroselPosts {
+      posts(
+        last: 4
+        orderBy: publishedAt_DESC
+        where: { featuredPost: false }
+      ) {
+        category {
+          ... on Category {
+            id
+            slug
+            category
+          }
+        }
+        authors {
+          name
+          slug
+          picture {
+            url
+          }
+        }
+        coverImage {
+          url
+        }
+        date
+        slug
+        title
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.posts;
 };

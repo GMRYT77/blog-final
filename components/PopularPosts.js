@@ -12,7 +12,6 @@ const PopularPosts = () => {
 
   useEffect(() => {
     getFeaturedPosts().then((a) => setFp(a));
-    console.log(fp);
   }, []);
 
   return (
@@ -47,6 +46,7 @@ const PopularPosts = () => {
                     coverImage={e.coverImage.url}
                     catg={e.category.category}
                     catgSlug={e.category.slug}
+                    category={e.category.category}
                     author={e.authors[0].name}
                     autSlug={e.authors[0].slug}
                     slug={e.slug}
