@@ -28,9 +28,10 @@ const PostBar = () => {
         </div>
         <Link
           href="/"
-          className="text-[125%] outfit font-[600] tracking-wide text-neutral-900/90 mb-2"
+          className="text-[105%] sm:text-[115%] md:text-[125%] leading-[22px] sm:leading-[24px] md:leading-[26px] roboto font-[400] tracking-wide text-neutral-900/90 mb-2"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          World News: Covering global events and major developments around the
+          world.
         </Link>
         <p className=" hidden sm:block text-[90%] outfit tracking-wide opacity-80 mb-3">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus rem
@@ -39,7 +40,7 @@ const PostBar = () => {
         </p>
         <Link
           href="/"
-          className="outfit tracking-wider font-medium uppercase text-[75%] text-blue-500/80 underline underline-offset-4 hover:text-blue-700"
+          className="  hidden sm:block outfit tracking-wider font-medium uppercase text-[75%] text-blue-500/80 underline underline-offset-4 hover:text-blue-700"
         >
           Continue Reading
         </Link>

@@ -9,7 +9,7 @@ const index = () => {
           <h1 className="text-[180%] zilla tracking-wider font-semibold  ">
             Latest Blog Posts
           </h1>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             <PostBar />
             <PostBar />
             <PostBar />
