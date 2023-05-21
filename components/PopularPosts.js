@@ -8,7 +8,7 @@ import posts from "@/backend/posts";
 
 const PopularPosts = (props) => {
   const posts = props.posts;
-  console.log(posts[0]);
+  console.log(posts[0].node);
   return (
     <section className="w-full ">
       <div className="cont flex flex-col gap-12 text-[.65rem] xxs:text-[.775rem] sm:text-[.875rem] md:text-[1rem]">
@@ -39,15 +39,15 @@ const PopularPosts = (props) => {
                 return (
                   <PostImgCard
                     key={i}
-                    coverImage={e.coverImage.url}
-                    category={e.category.category}
-                    catgSlug={e.category.slug}
-                    author={e.authors[0].name}
-                    autSlug={e.authors[0].slug}
-                    autImg={e.authors[0].picture.url}
-                    slug={e.slug}
-                    title={e.title}
-                    date={e.date}
+                    coverImage={e.node.coverImage.url}
+                    category={e.node.category.category}
+                    catgSlug={e.node.category.slug}
+                    author={e.node.authors[0].name}
+                    autSlug={e.node.authors[0].slug}
+                    autImg={e.node.authors[0].picture.url}
+                    slug={e.node.slug}
+                    title={e.node.title}
+                    date={e.node.date}
                   />
                 );
               } else {

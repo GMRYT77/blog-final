@@ -1,36 +1,41 @@
 import { request, gql } from "graphql-request";
-const graphqlAPI =
-  "https://api-ap-south-1.hygraph.com/v2/clhpygv7j79qq01uo1d255vhf/master";
-
+const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPosts = async () => {
   const query = gql`
-    query Assets {
-      posts {
-        category {
-          ... on Category {
-            category
+    query MyQuery {
+      postsConnection {
+        edges {
+          node {
+            authors {
+              name
+              slug
+              picture {
+                url
+              }
+            }
+            category {
+              ... on Category {
+                id
+                category
+                slug
+              }
+            }
+            date
+            createdAt
+            excerpt
             slug
+            tags
+            title
+            coverImage {
+              url
+            }
           }
         }
-        slug
-        tags
-        title
-        authors {
-          name
-          picture {
-            url
-          }
-          slug
-        }
-        coverImage {
-          url
-        }
-        date
       }
     }
   `;
   const result = await request(graphqlAPI, query);
-  return result.posts;
+  return result.postsConnection.edges;
 };
 export const getPostDetails = async (slug) => {
   const query = gql`
